@@ -1,0 +1,92 @@
+CHANGELOG
+
+Progetto: Sistema di Backup e Monitoraggio
+Classe: 3SI Serale
+Anno scolastico: 2025-2026
+
+Studenti:
+- Carloumberto Olivieri
+- Simone Volpe
+
+==================================================
+Versione 1.0 - 20/05/2026
+==================================================
+
+Attività svolte in laboratorio:
+
+- Presentazione del progetto interdisciplinare.
+- Analisi dei requisiti richiesti dal capitolato.
+- Studio dello scenario aziendale proposto.
+- Definizione della struttura iniziale del programma.
+- Creazione del file Python principale. (derivato da guardiano)
+- Implementazione della funzione scrivi_log().
+- Implementazione della funzione main().
+- Definizione del percorso iniziale della cartella da monitorare.
+- Inserimento della libreria watchfiles per il futuro monitoraggio.
+
+Stato del progetto:
+Prima versione funzionante dello scheletro applicativo.
+
+==================================================
+Versione 1.1 - 21/05/2026
+==================================================
+
+Attività di progettazione e revisione:
+
+- Analizzata la struttura generale del progetto.
+- Separata la cartella del progetto dalla cartella aziendale monitorata.
+- Confermato il percorso:
+
+  C:\Work\marconilab
+
+  come area di monitoraggio.
+
+- Confermato il percorso:
+
+  C:\venv\commit_final
+
+  come ambiente virtuale Python.
+
+- Definita la funzione monitora_cartella() per separare il monitoraggio dalla funzione principale.
+- Migliorata la documentazione interna del codice mediante docstring e commenti.
+- Definita la struttura iniziale del README.md.
+- Definita la struttura iniziale del Giornale di Bordo.
+- Stabilita la modalità di lavoro condivisa tra i componenti del gruppo.
+
+Stato del progetto:
+Struttura logica del programma definita.
+Monitoraggio con watchfiles predisposto ma non ancora collegato alla registrazione completa degli eventi.
+
+==================================================
+Versione 1.2 -    22/05/2026
+==================================================
+
+Attività di progettazione e revisione:
+
+- Implementazione scrittura eventi in file di log
+- Riscontrato errore funzionamento in ambiente virtuale Python
+- Interazione con gem e per sistemazione percorso con libreria os
+- aggiornamento commenti e sistemazioni estetiche
+- Gestione degli eventi di creazione, modifica ed eliminazione file.
+- Test funzionali del sistema.
+
+Stato del progetto:
+Monitoraggio con watchfiles predisposto e collegato alla registrazione completa degli eventi in log.
+Corretto bub percorsi file log (per utilizzo in ambiente virtuale)
+
+==================================================
+Versione 1.3 -    26/05/2026
+==================================================
+
+Attività di progettazione e revisione:
+
+- Revisione percorsi dei file con utilizzo libreria pathlib
+- Test di funzionamento sia in ambiente foreground che backgrond
+- Inserimento e predisposizione funzioni che si intendono implementare a breve
+	(come da accordi col cliente durante Audit 25/05/2026)
+
+- Test funzionali del sistema.
+
+Stato del progetto:
+Programma funzionante pronto per implementazione backup e report di backup.
+
