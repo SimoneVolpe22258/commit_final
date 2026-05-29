@@ -7,13 +7,34 @@ Ogni modifica viene stampata a video (per ora) e inserita nel
 File di log.
 """
 
-__author__= "Carloumbero Olivieri e Simone Volpe"
-__version__ ="Rev. 1.3 del 2026-05-26"
+__author__= "Carloumberto Olivieri e Simone Volpe"
+__version__ ="Rev. 2.0 del 2026-05-28"
 
 from pathlib import Path
 import time
 from watchfiles import watch
 
+def percorsi_conf():
+    """ Funzione per recuperare percorsi dei file esteni da "conf.con"
+    restituisco i tre valori corrispondenti ai percorsi.
+    """
+    path_cartella_da_osservare = 0
+    path_cartella_backup = 0
+        
+    with open("conf.conf", "r") as p:
+        for riga in p:
+            riga = riga.strip()
+            chiave, valore = riga.split("=")
+            valore = valore.strip('"')
+            if chiave == "path_cartella_da_osservare":
+                path_cartella_da_osservare = valore
+                
+            elif chiave == "path_cartella_backup":
+                path_cartella_backup = valore
+                                  
+        return path_cartella_da_osservare, path_cartella_backup
+    
+    
 def scrivi_log(messaggio, percorso_log):
     """
     Scrive un messaggio nel file di log.
@@ -31,6 +52,7 @@ def scrivi_log(messaggio, percorso_log):
 
     print(riga, end="")
 
+
 def monitora_cartella(cartella_da_osservare, percorso_log):
     """
     Gli eventi rilevati vengono inviati al file di log
@@ -45,20 +67,28 @@ def monitora_cartella(cartella_da_osservare, percorso_log):
         for tipo_evento, percorso_file in modifiche:
             messaggio = f"- Evento: {tipo_evento.name} | File: {percorso_file}"
             scrivi_log(messaggio, percorso_log)
-            
+
+
+def backup():
+    """
+    Funzione che si occupa del backup in luogo di modifica file.
+    """
+    # return
+
+
 def main():
     """
     Stabilisce i percorsi principali, registra l'avvio del programma
     e avvia il controllo della cartella del cliente.
     """
-
-    cartella_da_osservare = Path(r"C:\Work\marconilab")
+    path_cartella_da_osservare, path_cartella_backup = percorsi_conf()
+    cartella_da_osservare = Path(path_cartella_da_osservare)
+    cartella_backup= Path(path_cartella_backup)
     
-    # soluzione per percorso relativo come da Gem Bellini
     cartella_corrente = Path(__file__).parent
     cartella_progetto = cartella_corrente.parent 
     file_log = cartella_progetto / "log" / "monitor.log"
-
+    # path_backup = "\\w11STAT-18-216\work2\backup"
     scrivi_log("Programma avviato", file_log)
 
     print(f"--- monitor.py attivo su {cartella_da_osservare} ---")
