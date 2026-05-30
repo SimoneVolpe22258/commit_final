@@ -3,16 +3,18 @@ Programma monitor.py per il monitoraggio della cartella C:\\Work\\marconilab.
 
 Il programma registra l'avvio in un file di log e controlla
 le modifiche che avvengono nella cartella indicata.
-Ogni modifica viene stampata a video (per ora) e inserita nel
-File di log.
+Ogni modifica viene stampata a video e inserita nel
+File di log. successivamente il nuovo file viene copiato in cartella
 """
 
 __author__= "Carloumberto Olivieri e Simone Volpe"
-__version__ ="Rev. 2.0 del 2026-05-28"
+__version__ ="Rev. 3.0 del 2026-05-29"
 
 from pathlib import Path
 import time
 from watchfiles import watch
+import shutil
+
 
 def percorsi_conf():
     """ Funzione per recuperare percorsi dei file esteni da "conf.con"
@@ -53,48 +55,69 @@ def scrivi_log(messaggio, percorso_log):
     print(riga, end="")
 
 
-def monitora_cartella(cartella_da_osservare, percorso_log):
+def monitora_cartella(cartella_da_osservare, cartella_backup, percorso_log):
     """
-    Gli eventi rilevati vengono inviati al file di log
-    e successivamente potranno essere usati per il backup.
+    Monitora la cartella e aggiorna costantemente la cartella di backup.
     """
-    
+
     print(f"Monitoraggio avviato su: {cartella_da_osservare}")
 
     for modifiche in watch(cartella_da_osservare):
-        # scrivi_log("Modifica rilevata:", percorso_log) Riga che crea confusione nel log
-        
         for tipo_evento, percorso_file in modifiche:
+            percorso_file = Path(percorso_file)
+
             messaggio = f"- Evento: {tipo_evento.name} | File: {percorso_file}"
             scrivi_log(messaggio, percorso_log)
 
+            backup(percorso_file, cartella_da_osservare, cartella_backup, percorso_log)
+            
 
-def backup():
+def backup(sorgente, cartella_da_osservare, cartella_backup, percorso_log):
     """
-    Funzione che si occupa del backup in luogo di modifica file.
+    Copia il file modificato nella cartella di backup,
+    mantenendo la stessa struttura della cartella monitorata.
     """
-    # return
 
+    sorgente = Path(sorgente)
 
+    if not sorgente.is_file():
+        return
+
+    try:
+        percorso_relativo = sorgente.relative_to(cartella_da_osservare)
+        destinazione = cartella_backup / percorso_relativo
+
+        destinazione.parent.mkdir(parents=True, exist_ok=True)
+
+        shutil.copy2(sorgente, destinazione)
+
+        scrivi_log(f"Backup aggiornato: {destinazione}", percorso_log)
+        
+    except Exception as e:
+        scrivi_log(f"Errore durante il backup di {sorgente}: {e}", percorso_log)
+        
 def main():
     """
     Stabilisce i percorsi principali, registra l'avvio del programma
     e avvia il controllo della cartella del cliente.
     """
     path_cartella_da_osservare, path_cartella_backup = percorsi_conf()
+
     cartella_da_osservare = Path(path_cartella_da_osservare)
-    cartella_backup= Path(path_cartella_backup)
-    
+    cartella_backup = Path(path_cartella_backup)
+
     cartella_corrente = Path(__file__).parent
-    cartella_progetto = cartella_corrente.parent 
+    cartella_progetto = cartella_corrente.parent
     file_log = cartella_progetto / "log" / "monitor.log"
-    # path_backup = "\\w11STAT-18-216\work2\backup"
+
+    file_log.parent.mkdir(parents=True, exist_ok=True)
+
     scrivi_log("Programma avviato", file_log)
 
     print(f"--- monitor.py attivo su {cartella_da_osservare} ---")
     print("Premi Ctrl + C per fermarlo se sei in console.")
 
-    monitora_cartella(cartella_da_osservare, file_log)
+    monitora_cartella(cartella_da_osservare, cartella_backup, file_log)
 
 if __name__ == "__main__":
     main()
