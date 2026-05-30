@@ -90,3 +90,46 @@ Attività di progettazione e revisione:
 Stato del progetto:
 Programma funzionante pronto per implementazione backup e report di backup.
 
+==================================================
+Versione 2.0 - 28/05/2026
+==================================================
+
+Attività di progettazione e revisione:
+
+- Implementata la funzione percorsi_conf() per la lettura dei percorsi da file di configurazione esterno.
+- Introdotto il file conf.conf per la gestione centralizzata dei parametri del programma.
+- Eliminata la dipendenza dai percorsi definiti direttamente nel codice sorgente.
+- Predisposta la gestione della cartella di backup tramite configurazione.
+- Inserita la funzione backup() come struttura iniziale per le future funzionalità di salvataggio automatico.
+- Aggiornata la funzione main() per utilizzare i percorsi caricati dinamicamente.
+- Migliorata la modularità del programma separando configurazione e logica applicativa.
+- Eseguiti test di lettura configurazione e monitoraggio della cartella aziendale.
+- Verificata la compatibilità del programma con differenti percorsi di lavoro.
+
+Stato del progetto:
+Sistema di monitoraggio pienamente funzionante con configurazione esterna dei percorsi.
+Predisposta l'architettura necessaria all'implementazione del sistema di backup automatico che verrà sviluppato nelle revisioni successive.
+
+==================================================
+Versione 3.0 - 30/05/2026
+==================================================
+
+Attività di progettazione e revisione:
+
+- Implementata la funzione backup() per la copia automatica dei file monitorati.
+- Inserita la libreria shutil per la gestione delle operazioni di backup.
+- Integrato il sistema di backup con il monitoraggio degli eventi rilevati da watchfiles.
+- Aggiornata la funzione monitora_cartella() per l'esecuzione automatica del backup dopo ogni modifica rilevata.
+- Implementata la copia dei file mantenendo la struttura originale delle sottocartelle.
+- Aggiunta la creazione automatica delle directory mancanti nella cartella di destinazione.
+- Introdotto il calcolo dei percorsi relativi tramite pathlib per garantire la corretta organizzazione dei backup.
+- Implementata la registrazione nel file di log delle operazioni di backup eseguite.
+- Inserita la gestione delle eccezioni durante le operazioni di copia e sincronizzazione.
+- Migliorata la creazione automatica della cartella log in caso di assenza.
+- Eseguiti test funzionali di monitoraggio, copia e aggiornamento dei file nella cartella di backup.
+- Verificata la corretta sincronizzazione tra cartella monitorata e repository di backup.
+
+Stato del progetto:
+Sistema di monitoraggio e backup completamente operativo.
+Le modifiche rilevate nella cartella aziendale vengono registrate nel file di log e replicate automaticamente nella cartella di backup mantenendo la struttura originale delle directory.
+Il progetto risulta pronto per l'implementazione delle funzionalità di reportistica e gestione avanzata dei backup.

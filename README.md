@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/28333896/README.md)
 # Sistema di Backup e Monitoraggio
 
 ## Descrizione del progetto
@@ -17,7 +16,7 @@ Il sistema è composto da:
 
 - Programma Python per il monitoraggio dei file;
 - File di log per la registrazione degli eventi;
-- Sistema di backup automatico; (ancora da implementare)
+- Sistema di backup automatico;
 - Report CSV con informazioni sui file monitorati; (ancora da implementare)
 - Macchina virtuale utilizzata come server di backup. (ancora da implementare)
 
@@ -34,6 +33,7 @@ commit_final/
 │   └── monitor.log
 ├── src/
 │   └── monitor.py
+├── conf.conf
 ├── CHANGELOG.txt
 └── README.md
 ```
@@ -46,19 +46,6 @@ Il programma controlla la cartella:
 
 ```text
 C:\Work\marconilab
-```
-
-All'interno di questa cartella sono presenti le directory aziendali:
-
-```text
-marconilab/
-├── clienti/
-├── preventivi/
-├── amministrazione/
-├── immagini/
-├── logs/
-├── backup/
-└── config/
 ```
 
 Le cartelle principali monitorate sono:
@@ -79,8 +66,8 @@ Il programma esegue le seguenti operazioni:
    - modifica file;
    - eliminazione file.
 3. Registrazione degli eventi nel file di log.
-4. Creazione delle copie di backup.
-5. Generazione dei report CSV.
+4. Creazione automatica delle copie di backup.
+5. Generazione dei report CSV. (funzionalità prevista)
 
 ---
 
@@ -94,17 +81,15 @@ Percorso previsto:
 C:\venv\commit_final
 ```
 
-L'ambiente virtuale consente di installare le librerie necessarie senza modificare la configurazione generale del sistema operativo.
-
 ---
 
 ## Librerie utilizzate
 
-Attualmente viene utilizzata la libreria:
+Attualmente vengono utilizzate le librerie:
 
 - watchfiles
-
-La libreria permette di rilevare automaticamente le modifiche effettuate nelle cartelle monitorate.
+- pathlib
+- shutil
 
 ---
 
@@ -115,14 +100,6 @@ Il progetto viene sviluppato da:
 - Carloumberto Olivieri
 - Simone Volpe
 
-
-Entrambi partecipano all'analisi, alla progettazione e allo sviluppo del software.
-
-Carloumberto cura inoltre:
-
-- il Giornale di Bordo;
-- l'aggiornamento del file CHANGELOG.
-
 ---
 
 ## Difficoltà incontrate
@@ -132,7 +109,8 @@ Durante le prime fasi del progetto è stato necessario:
 - comprendere il funzionamento della libreria watchfiles;
 - definire correttamente la struttura delle cartelle;
 - separare la cartella del progetto dalla cartella aziendale monitorata;
-- organizzare il lavoro in modo progressivo.
+- gestire correttamente i percorsi dei file;
+- configurare il sistema di backup automatico.
 
 ---
 
@@ -143,18 +121,46 @@ In futuro il sistema potrebbe essere esteso con:
 - filtri sulle estensioni dei file;
 - backup incrementale;
 - controllo dell'integrità dei file;
-- configurazione tramite file esterno;
-- gestione avanzata degli errori.
+- gestione avanzata degli errori;
+- generazione automatica di report CSV.
 
 ---
 
 ## Stato attuale del progetto
 
-Attualmente è stata realizzata la struttura iniziale dell'applicazione Python con:
+Attualmente il progetto comprende:
 
-- funzione di scrittura del log;
-- funzione principale di avvio;
-- predisposizione del monitoraggio delle cartelle tramite watchfiles.
-- utilizzo libreria pathlib
+- monitoraggio delle cartelle tramite la libreria watchfiles;
+- registrazione degli eventi nel file di log;
+- utilizzo della libreria pathlib per la gestione dei percorsi;
+- lettura dei percorsi da file conf.conf;
+- backup automatico dei file modificati.
 
-Le funzionalità verranno completate nelle successive fasi di sviluppo.
+Sono ancora da completare:
+
+- generazione dei report CSV;
+- organizzazione della macchina virtuale per il backup;
+- eventuali funzioni aggiuntive richieste dal cliente.
+
+---
+
+## Versione attuale
+
+Versione software: **3.0**
+
+Ultimo aggiornamento: **29/05/2026**
+
+Funzionalità operative:
+
+- monitoraggio dei file;
+- registrazione eventi;
+- gestione configurazione tramite file esterno;
+- backup automatico dei file modificati.
+
+Funzionalità in sviluppo:
+
+- report CSV;
+- infrastruttura di backup su macchina virtuale.
+- gestione arresto monitoraggio
+- monitoraggio solo su cartelle specifiche
+
