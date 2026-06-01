@@ -133,3 +133,20 @@ Stato del progetto:
 Sistema di monitoraggio e backup completamente operativo.
 Le modifiche rilevate nella cartella aziendale vengono registrate nel file di log e replicate automaticamente nella cartella di backup mantenendo la struttura originale delle directory.
 Il progetto risulta pronto per l'implementazione delle funzionalità di reportistica e gestione avanzata dei backup.
+
+
+==================================================
+Versione 3.2 - 01/06/2026
+==================================================
+
+Attività di progettazione e revisione: (meet)
+
+Nuove funzionalità
+- Aggiunta la gestione della configurazione sottocartelle_da_monitorare nel file conf.conf.
+- Implementato il filtro degli eventi per limitare il monitoraggio alle sole sottocartelle configurate.
+- Spostato il caricamento del file di configurazione su percorso assoluto basato sulla posizione dello script.
+- Aggiunto controllo preventivo sulle righe del file di configurazione:
+	ignora righe vuote;
+	ignora commenti (#);
+	ignora righe prive del carattere =.
+
