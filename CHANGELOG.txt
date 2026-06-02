@@ -136,10 +136,10 @@ Il progetto risulta pronto per l'implementazione delle funzionalità di reportis
 
 
 ==================================================
-Versione 3.2 - 01/06/2026
+Versione 3.2 - 01/06/2026 solo simone
 ==================================================
 
-Attività di progettazione e revisione: (meet)
+Attività di progettazione e revisione: (solo simone)
 
 Nuove funzionalità
 - Aggiunta la gestione della configurazione sottocartelle_da_monitorare nel file conf.conf.
@@ -149,4 +149,12 @@ Nuove funzionalità
 	ignora righe vuote;
 	ignora commenti (#);
 	ignora righe prive del carattere =.
+	Durante l'ultima revisione del progetto è stata aggiornata la documentazione tecnica per allinearla alla versione software 3.2. 
+
+	Sono state documentate le nuove funzionalità di configurazione tramite file conf.conf, il monitoraggio selettivo delle sottocartelle, 
+	il sistema di backup che mantiene la struttura originale delle directory e la gestione degli errori durante le operazioni di copia. 
+
+Attenzione Nel codice non esiste alcuna implementazione CSV.
+Funzionalità prevista ma non ancora implementata.
+
 

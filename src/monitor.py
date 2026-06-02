@@ -21,7 +21,6 @@ def percorsi_conf(percorso_conf):
     restituisco i tre valori corrispondenti ai percorsi.
     """
     sottocartelle = []
-    
     path_cartella_da_osservare = 0
     path_cartella_backup = 0
         
@@ -29,7 +28,7 @@ def percorsi_conf(percorso_conf):
         for riga in p:
             riga = riga.strip() # Toglie spazi bianchi a inizio e fine riga
             
-            # --- LO SCUDO DI SICUREZZA ---
+            # --- REGOLE DI LETTURA DI CONF.CONF ---
             # 1. Se la riga è vuota, salta.
             # 2. Se la riga inizia con #, è un commento, quindi salta.
             # 3. Per sicurezza, se manca il simbolo '=', non possiamo fare lo split, quindi salta.
@@ -137,7 +136,6 @@ def main():
     cartella_backup = Path(path_cartella_backup)
         
     file_log = cartella_progetto / "log" / "monitor.log"
-    
     
     file_log.parent.mkdir(parents=True, exist_ok=True)
 

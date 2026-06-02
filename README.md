@@ -14,11 +14,13 @@ Il progetto prende come riferimento uno scenario aziendale nel quale è necessar
 
 Il sistema è composto da:
 
-- Programma Python per il monitoraggio dei file;
-- File di log per la registrazione degli eventi;
-- Sistema di backup automatico;
-- Report CSV con informazioni sui file monitorati; (ancora da implementare)
-- Macchina virtuale utilizzata come server di backup. (ancora da implementare)
+- programma Python per il monitoraggio dei file;
+- file di configurazione `conf.conf` per la gestione dei percorsi;
+- file di log per la registrazione degli eventi;
+- sistema di backup automatico dei file modificati;
+- filtro sulle sottocartelle da monitorare;
+- report CSV con informazioni sui file monitorati, ancora da implementare;
+- macchina virtuale utilizzata come server di backup, ancora da implementare.
 
 ---
 
@@ -32,8 +34,8 @@ commit_final/
 ├── log/
 │   └── monitor.log
 ├── src/
-│   └── monitor.py
-├── conf.conf
+│   ├── monitor.py
+│   └── conf.conf
 ├── CHANGELOG.txt
 └── README.md
 ```
@@ -42,17 +44,49 @@ commit_final/
 
 ## Cartelle monitorate
 
-Il programma controlla la cartella:
+Il programma controlla la cartella principale indicata nel file `conf.conf`.
+
+Percorso previsto:
 
 ```text
 C:\Work\marconilab
 ```
 
-Le cartelle principali monitorate sono:
+Le sottocartelle da monitorare vengono lette dal parametro:
+
+```text
+sottocartelle_da_monitorare
+```
+
+Le cartelle principali previste sono:
 
 - clienti
 - preventivi
 - amministrazione
+
+Il programma ignora gli eventi che avvengono fuori dalle sottocartelle configurate.
+
+---
+
+## File di configurazione
+
+Il file `conf.conf` contiene i percorsi utilizzati dal programma.
+
+Esempio di configurazione:
+
+```text
+path_cartella_da_osservare="C:\Work\marconilab"
+path_cartella_backup="C:\Work\backup_marconilab"
+sottocartelle_da_monitorare=clienti,preventivi,amministrazione
+```
+
+Il programma legge il file di configurazione all'avvio e recupera:
+
+- percorso della cartella da osservare;
+- percorso della cartella di backup;
+- elenco delle sottocartelle da monitorare.
+
+Le righe vuote, le righe commentate con `#` e le righe senza `=` vengono ignorate.
 
 ---
 
@@ -60,14 +94,71 @@ Le cartelle principali monitorate sono:
 
 Il programma esegue le seguenti operazioni:
 
-1. Avvio del monitoraggio delle cartelle.
-2. Rilevazione di:
-   - creazione file;
-   - modifica file;
-   - eliminazione file.
-3. Registrazione degli eventi nel file di log.
-4. Creazione automatica delle copie di backup.
-5. Generazione dei report CSV. (funzionalità prevista)
+1. Legge i percorsi dal file `conf.conf`.
+2. Crea la cartella `log`, se non esiste.
+3. Registra l'avvio del programma nel file `monitor.log`.
+4. Avvia il monitoraggio della cartella configurata.
+5. Rileva gli eventi sui file:
+   - creazione;
+   - modifica;
+   - eliminazione.
+6. Controlla che il file appartenga a una delle sottocartelle configurate.
+7. Registra ogni evento valido nel file di log.
+8. Copia automaticamente nel backup i file esistenti e modificati.
+9. Mantiene nel backup la stessa struttura delle cartelle originali.
+
+Il programma può essere fermato manualmente dalla console con:
+
+```text
+Ctrl + C
+```
+
+---
+
+## Backup automatico
+
+Quando viene rilevato un file valido, il programma crea una copia nella cartella di backup.
+
+Il backup mantiene il percorso relativo rispetto alla cartella monitorata.
+
+Esempio:
+
+```text
+C:\Work\marconilab\clienti\cliente1\documento.txt
+```
+
+viene copiato in:
+
+```text
+C:\Work\backup_marconilab\clienti\cliente1\documento.txt
+```
+
+Se la cartella di destinazione non esiste, viene creata automaticamente.
+
+---
+
+## File di log
+
+Gli eventi vengono registrati nel file:
+
+```text
+log\monitor.log
+```
+
+Ogni riga del log contiene:
+
+- data e ora dell'evento;
+- tipo di evento rilevato;
+- percorso del file interessato;
+- eventuale conferma di backup;
+- eventuali errori durante il backup.
+
+Esempio:
+
+```text
+[2026-05-29 10:15:32] - Evento: modified | File: C:\Work\marconilab\clienti\file.txt
+[2026-05-29 10:15:32] Backup aggiornato: C:\Work\backup_marconilab\clienti\file.txt
+```
 
 ---
 
@@ -87,9 +178,27 @@ C:\venv\commit_final
 
 Attualmente vengono utilizzate le librerie:
 
-- watchfiles
-- pathlib
-- shutil
+- `watchfiles`, per monitorare le modifiche ai file;
+- `pathlib`, per gestire i percorsi in modo più sicuro;
+- `shutil`, per copiare i file nella cartella di backup;
+- `time`, per inserire data e ora nei messaggi di log.
+
+---
+
+## Avvio del programma
+
+Per avviare il programma, posizionarsi nella cartella del progetto ed eseguire:
+
+```bash
+python src/monitor.py
+```
+
+All'avvio il programma mostra un messaggio simile a:
+
+```text
+--- monitor.py attivo su C:\Work\marconilab ---
+Premi Ctrl + C per fermarlo se sei in console.
+```
 
 ---
 
@@ -104,13 +213,15 @@ Il progetto viene sviluppato da:
 
 ## Difficoltà incontrate
 
-Durante le prime fasi del progetto è stato necessario:
+Durante lo sviluppo del progetto è stato necessario:
 
-- comprendere il funzionamento della libreria watchfiles;
+- comprendere il funzionamento della libreria `watchfiles`;
 - definire correttamente la struttura delle cartelle;
 - separare la cartella del progetto dalla cartella aziendale monitorata;
 - gestire correttamente i percorsi dei file;
-- configurare il sistema di backup automatico.
+- configurare il sistema di backup automatico;
+- leggere i percorsi da un file di configurazione esterno;
+- limitare il monitoraggio solo alle sottocartelle richieste.
 
 ---
 
@@ -118,11 +229,13 @@ Durante le prime fasi del progetto è stato necessario:
 
 In futuro il sistema potrebbe essere esteso con:
 
-- filtri sulle estensioni dei file;
+- generazione automatica di report CSV;
 - backup incrementale;
 - controllo dell'integrità dei file;
 - gestione avanzata degli errori;
-- generazione automatica di report CSV.
+- interfaccia più semplice per l'avvio e l'arresto;
+- infrastruttura di backup su macchina virtuale;
+- filtri sulle estensioni dei file.
 
 ---
 
@@ -130,11 +243,14 @@ In futuro il sistema potrebbe essere esteso con:
 
 Attualmente il progetto comprende:
 
-- monitoraggio delle cartelle tramite la libreria watchfiles;
+- monitoraggio delle cartelle tramite la libreria `watchfiles`;
 - registrazione degli eventi nel file di log;
-- utilizzo della libreria pathlib per la gestione dei percorsi;
-- lettura dei percorsi da file conf.conf;
-- backup automatico dei file modificati.
+- utilizzo della libreria `pathlib` per la gestione dei percorsi;
+- lettura dei percorsi da file `conf.conf`;
+- backup automatico dei file modificati;
+- mantenimento della struttura originale nel backup;
+- monitoraggio limitato alle sottocartelle configurate;
+- arresto manuale da console tramite `Ctrl + C`.
 
 Sono ancora da completare:
 
@@ -146,21 +262,24 @@ Sono ancora da completare:
 
 ## Versione attuale
 
-Versione software: **3.0**
+Versione software: **3.2**
 
-Ultimo aggiornamento: **29/05/2026**
+Ultimo aggiornamento: **29/05/2026** (solo Simone)
 
 Funzionalità operative:
 
 - monitoraggio dei file;
 - registrazione eventi;
 - gestione configurazione tramite file esterno;
-- backup automatico dei file modificati.
+- backup automatico dei file modificati;
+- monitoraggio solo delle sottocartelle specificate (tramite file esterno);
+- mantenimento della struttura delle cartelle nel backup;
+- gestione degli errori durante il backup;
+- arresto manuale del programma da console.
 
 Funzionalità in sviluppo:
 
 - report CSV;
-- infrastruttura di backup su macchina virtuale.
-- gestione arresto monitoraggio
-- monitoraggio solo su cartelle specifiche
-
+- infrastruttura di backup su macchina virtuale;
+- filtri avanzati sui file;
+- backup incrementale.
