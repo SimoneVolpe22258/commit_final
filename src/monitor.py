@@ -122,20 +122,6 @@ def file_in_cartelle_monitorate(percorso_file, sottocartelle):
     return False
 
 
-def traduci_evento(evento_watch):
-    """
-    Converte i nomi degli eventi della libreria watchfiles in italiano.
-    """
-    if evento_watch == "added":
-        return "creazione"
-    elif evento_watch == "modified":
-        return "modifica"
-    elif evento_watch == "deleted":
-        return "eliminazione"
-    else:
-        return evento_watch
-
-
 def monitora_cartella(cartella_da_osservare, cartella_backup, percorso_log, sottocartelle, percorso_csv):
     """
     Controlla la cartella monitorata.
@@ -146,12 +132,12 @@ def monitora_cartella(cartella_da_osservare, cartella_backup, percorso_log, sott
     for modifiche in watch(cartella_da_osservare):
         for tipo_evento, percorso_file in modifiche:
             percorso_file = Path(percorso_file)
-            evento = traduci_evento(tipo_evento.name)
+            evento = tipo_evento.name
 
             if not file_in_cartelle_monitorate(percorso_file, sottocartelle):
                 continue
 
-            if evento == "eliminazione":
+            if evento == "deleted":
                 scrivi_log("Eliminato file nella cartella monitorata", percorso_log)
                 scrivi_csv(percorso_csv, evento, percorso_file, cartella_da_osservare, "NON CANCELLATO")
                 continue

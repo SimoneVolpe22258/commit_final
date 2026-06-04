@@ -174,11 +174,10 @@ Attività di progettazione e revisione:
     eliminazione di file monitorati.
 
 - Aggiornata la funzione monitora_cartella() per registrare gli eventi dei file nel report CSV.
-- Implementata la traduzione degli eventi restituiti dalla libreria watchfiles:
-    added -> creazione;
-    modified -> modifica;
-    deleted -> eliminazione.
-
+- Utilizzati direttamente gli eventi restituiti dalla libreria watchfiles:
+    added;
+    modified;
+    deleted.
 - Implementata la registrazione nel CSV delle seguenti informazioni:
     data e ora evento;
     tipo evento;

@@ -166,17 +166,15 @@ Esempio:
 
 ```text
 data_ora;evento;file;dimensione;ultima_modifica;backup
-2026-06-04 10:15:20;creazione;clienti\test.txt;120;2026-06-04 10:15:18;OK
-2026-06-04 10:20:35;eliminazione;clienti\test.txt;N/D;N/D;NON CANCELLATO
+2026-06-04 10:15:20;added;clienti\test.txt;120;2026-06-04 10:15:18;OK
+2026-06-04 10:20:35;deleted;clienti\test.txt;N/D;N/D;NON CANCELLATO
 ```
 
-Gli eventi vengono scritti in italiano. La libreria `watchfiles` rileva internamente gli eventi, ma il programma li converte nei termini:
+Gli eventi vengono registrati utilizzando direttamente i nomi restituiti dalla libreria watchfiles:
 
-- creazione;
-- modifica;
-- eliminazione.
-
----
+- added;
+- modified;
+- deleted.
 
 ## File di log
 
