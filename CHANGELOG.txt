@@ -157,4 +157,71 @@ Nuove funzionalità
 Attenzione Nel codice non esiste alcuna implementazione CSV.
 Funzionalità prevista ma non ancora implementata.
 
+==================================================
+Versione 4.0 - 04/06/2026
+==================================================
+
+Attività di progettazione e revisione:
+
+- Implementata la funzione scrivi_csv() per la generazione automatica del report CSV.
+- Inserita la configurazione del percorso del file CSV tramite parametro path_file_csv nel file conf.conf.
+- Separata la gestione delle informazioni operative del programma dagli eventi relativi ai file monitorati.
+- Modificata la funzione scrivi_log() affinché registri esclusivamente:
+    avvio del programma;
+    arresto del programma;
+    operazioni di backup;
+    errori durante il backup;
+    eliminazione di file monitorati.
+
+- Aggiornata la funzione monitora_cartella() per registrare gli eventi dei file nel report CSV.
+- Implementata la traduzione degli eventi restituiti dalla libreria watchfiles:
+    added -> creazione;
+    modified -> modifica;
+    deleted -> eliminazione.
+
+- Implementata la registrazione nel CSV delle seguenti informazioni:
+    data e ora evento;
+    tipo evento;
+    percorso relativo del file;
+    dimensione file;
+    data ultima modifica;
+    esito backup.
+
+- Implementata la gestione delle eliminazioni:
+    il file eliminato viene registrato nel CSV;
+    viene registrata l'eliminazione nel file di log;
+    la copia eventualmente presente nella cartella di backup non viene eliminata.
+
+- Inserita la gestione dell'arresto controllato del programma tramite Ctrl + C.
+- Aggiornata la documentazione README.md per allineamento alla revisione 4.0.
+- Eseguiti test funzionali di:
+    creazione file;
+    modifica file;
+    eliminazione file;
+    generazione report CSV;
+    aggiornamento backup;
+    arresto controllato del monitoraggio.
+
+Stato del progetto:
+
+Sistema di monitoraggio e backup pienamente operativo.
+
+Le informazioni operative vengono registrate nel file di log.
+Gli eventi relativi ai file monitorati vengono registrati nel report CSV.
+Il backup automatico mantiene la struttura originale delle cartelle e conserva le copie dei file eliminati.
+
+Funzionalità completate:
+- monitoraggio cartelle;
+- configurazione tramite file conf.conf;
+- backup automatico;
+- report CSV;
+- gestione eliminazioni;
+- arresto controllato del programma.
+
+Funzionalità ancora da implementare:
+- utilizzo della macchina virtuale come server di backup;
+- backup incrementale;
+- filtri avanzati sulle estensioni dei file;
+- eventuali richieste aggiuntive del cliente.
+
 

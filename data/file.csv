@@ -1,0 +1,8 @@
+data_ora;evento;file;dimensione;ultima_modifica;backup
+2026-06-04 09:55:49;added;clienti\Nuovo documento di testo.txt;0;2026-06-04 09:55:49;OK
+2026-06-04 09:56:04;added;clienti\Nuova cartella\Nuovo documento di testo.txt;0;2026-06-04 09:56:04;OK
+2026-06-04 09:56:14;deleted;clienti\Nuova cartella;N/D;N/D;NON CANCELLATO
+2026-06-04 09:56:19;deleted;clienti\Nuovo documento di testo.txt;N/D;N/D;NON CANCELLATO
+2026-06-04 10:50:20;eliminazione;clienti\Nuova cartella;N/D;N/D;NON CANCELLATO
+2026-06-04 10:50:23;creazione;clienti\Nuovo documento di testo.txt;0;2026-06-04 10:50:23;OK
+2026-06-04 10:50:33;eliminazione;clienti\Nuovo documento di testo.txt;N/D;N/D;NON CANCELLATO

@@ -16,10 +16,10 @@ Il sistema è composto da:
 
 - programma Python per il monitoraggio dei file;
 - file di configurazione `conf.conf` per la gestione dei percorsi;
-- file di log per la registrazione degli eventi;
+- file di log per la registrazione delle informazioni di esecuzione;
 - sistema di backup automatico dei file modificati;
 - filtro sulle sottocartelle da monitorare;
-- report CSV con informazioni sui file monitorati, ancora da implementare;
+- report CSV contenente gli eventi rilevati sui file monitorati;
 - macchina virtuale utilizzata come server di backup, ancora da implementare.
 
 ---
@@ -30,6 +30,7 @@ Il sistema è composto da:
 commit_final/
 │
 ├── data/
+│   └── file.csv
 ├── documentazione/
 ├── log/
 │   └── monitor.log
@@ -76,15 +77,17 @@ Esempio di configurazione:
 
 ```text
 path_cartella_da_osservare="C:\Work\marconilab"
-path_cartella_backup="C:\Work\backup_marconilab"
-sottocartelle_da_monitorare=clienti,preventivi,amministrazione
+path_cartella_backup="C:\Work2\backup"
+sottocartelle_da_monitorare="clienti,preventivi,amministrazione"
+path_file_csv="../data/file.csv"
 ```
 
 Il programma legge il file di configurazione all'avvio e recupera:
 
 - percorso della cartella da osservare;
 - percorso della cartella di backup;
-- elenco delle sottocartelle da monitorare.
+- elenco delle sottocartelle da monitorare;
+- percorso del file CSV utilizzato per il report degli eventi.
 
 Le righe vuote, le righe commentate con `#` e le righe senza `=` vengono ignorate.
 
@@ -95,7 +98,7 @@ Le righe vuote, le righe commentate con `#` e le righe senza `=` vengono ignorat
 Il programma esegue le seguenti operazioni:
 
 1. Legge i percorsi dal file `conf.conf`.
-2. Crea la cartella `log`, se non esiste.
+2. Crea le cartelle `log` e `data`, se non esistono.
 3. Registra l'avvio del programma nel file `monitor.log`.
 4. Avvia il monitoraggio della cartella configurata.
 5. Rileva gli eventi sui file:
@@ -103,9 +106,10 @@ Il programma esegue le seguenti operazioni:
    - modifica;
    - eliminazione.
 6. Controlla che il file appartenga a una delle sottocartelle configurate.
-7. Registra ogni evento valido nel file di log.
-8. Copia automaticamente nel backup i file esistenti e modificati.
+7. Registra l'evento nel file CSV.
+8. Copia automaticamente nel backup i file creati o modificati.
 9. Mantiene nel backup la stessa struttura delle cartelle originali.
+10. In caso di eliminazione del file, registra l'evento ma non elimina la copia presente nel backup.
 
 Il programma può essere fermato manualmente dalla console con:
 
@@ -130,35 +134,78 @@ C:\Work\marconilab\clienti\cliente1\documento.txt
 viene copiato in:
 
 ```text
-C:\Work\backup_marconilab\clienti\cliente1\documento.txt
+C:\Work2\backup\clienti\cliente1\documento.txt
 ```
 
 Se la cartella di destinazione non esiste, viene creata automaticamente.
+
+In caso di eliminazione di un file monitorato, la copia già presente nel backup non viene eliminata.
+
+---
+
+## Report CSV
+
+Gli eventi rilevati sui file vengono registrati nel file CSV configurato nel file `conf.conf`.
+
+Percorso predefinito:
+
+```text
+data\file.csv
+```
+
+Il file CSV contiene:
+
+- data e ora dell'evento;
+- tipo di evento;
+- percorso del file;
+- dimensione del file;
+- data ultima modifica;
+- esito del backup.
+
+Esempio:
+
+```text
+data_ora;evento;file;dimensione;ultima_modifica;backup
+2026-06-04 10:15:20;creazione;clienti\test.txt;120;2026-06-04 10:15:18;OK
+2026-06-04 10:20:35;eliminazione;clienti\test.txt;N/D;N/D;NON CANCELLATO
+```
+
+Gli eventi vengono scritti in italiano. La libreria `watchfiles` rileva internamente gli eventi, ma il programma li converte nei termini:
+
+- creazione;
+- modifica;
+- eliminazione.
 
 ---
 
 ## File di log
 
-Gli eventi vengono registrati nel file:
+Il file:
 
 ```text
 log\monitor.log
 ```
 
-Ogni riga del log contiene:
+contiene esclusivamente informazioni di esecuzione del programma.
 
-- data e ora dell'evento;
-- tipo di evento rilevato;
-- percorso del file interessato;
-- eventuale conferma di backup;
-- eventuali errori durante il backup.
+Vengono registrati:
+
+- avvio del programma;
+- arresto del programma;
+- esito delle operazioni di backup;
+- eventuali errori durante il backup;
+- eliminazione di file monitorati.
 
 Esempio:
 
 ```text
-[2026-05-29 10:15:32] - Evento: modified | File: C:\Work\marconilab\clienti\file.txt
-[2026-05-29 10:15:32] Backup aggiornato: C:\Work\backup_marconilab\clienti\file.txt
+[2026-06-04 10:15:00] Programma avviato
+[2026-06-04 10:15:20] Backup aggiornato: C:\Work2\backup\clienti\test.txt
+[2026-06-04 10:20:35] Eliminato file nella cartella monitorata
+[2026-06-04 10:30:00] Programma terminato dall'utente
 ```
+
+Gli eventi di creazione e modifica dei file non vengono più scritti nel log, ma vengono registrati nel report CSV.
 
 ---
 
@@ -181,7 +228,7 @@ Attualmente vengono utilizzate le librerie:
 - `watchfiles`, per monitorare le modifiche ai file;
 - `pathlib`, per gestire i percorsi in modo più sicuro;
 - `shutil`, per copiare i file nella cartella di backup;
-- `time`, per inserire data e ora nei messaggi di log.
+- `time`, per inserire data e ora nei messaggi di log e nel CSV.
 
 ---
 
@@ -221,7 +268,8 @@ Durante lo sviluppo del progetto è stato necessario:
 - gestire correttamente i percorsi dei file;
 - configurare il sistema di backup automatico;
 - leggere i percorsi da un file di configurazione esterno;
-- limitare il monitoraggio solo alle sottocartelle richieste.
+- limitare il monitoraggio solo alle sottocartelle richieste;
+- separare le informazioni operative del log dai dati degli eventi salvati nel CSV.
 
 ---
 
@@ -229,7 +277,6 @@ Durante lo sviluppo del progetto è stato necessario:
 
 In futuro il sistema potrebbe essere esteso con:
 
-- generazione automatica di report CSV;
 - backup incrementale;
 - controllo dell'integrità dei file;
 - gestione avanzata degli errori;
@@ -244,42 +291,40 @@ In futuro il sistema potrebbe essere esteso con:
 Attualmente il progetto comprende:
 
 - monitoraggio delle cartelle tramite la libreria `watchfiles`;
-- registrazione degli eventi nel file di log;
+- registrazione degli eventi in file CSV;
+- registrazione delle informazioni operative nel file di log;
 - utilizzo della libreria `pathlib` per la gestione dei percorsi;
 - lettura dei percorsi da file `conf.conf`;
-- backup automatico dei file modificati;
+- backup automatico dei file creati e modificati;
 - mantenimento della struttura originale nel backup;
 - monitoraggio limitato alle sottocartelle configurate;
-- arresto manuale da console tramite `Ctrl + C`.
+- gestione delle eliminazioni senza cancellazione delle copie di backup;
+- arresto controllato da console tramite `Ctrl + C`.
 
 Sono ancora da completare:
 
-- generazione dei report CSV;
 - organizzazione della macchina virtuale per il backup;
-- eventuali funzioni aggiuntive richieste dal cliente.
+- eventuali funzioni aggiuntive richieste dal cliente;
+- eventuale backup incrementale;
+- filtri avanzati sulle estensioni dei file.
 
 ---
 
 ## Versione attuale
 
-Versione software: **3.2**
+Versione software: **4.0**
 
-Ultimo aggiornamento: **29/05/2026** (solo Simone)
+Ultimo aggiornamento: **04/06/2026**
 
 Funzionalità operative:
 
 - monitoraggio dei file;
-- registrazione eventi;
+- registrazione eventi nel file CSV;
+- log riservato alle informazioni di esecuzione;
 - gestione configurazione tramite file esterno;
-- backup automatico dei file modificati;
-- monitoraggio solo delle sottocartelle specificate (tramite file esterno);
+- backup automatico dei file creati e modificati;
+- monitoraggio solo delle sottocartelle specificate;
 - mantenimento della struttura delle cartelle nel backup;
 - gestione degli errori durante il backup;
+- eliminazione registrata senza cancellazione del backup;
 - arresto manuale del programma da console.
-
-Funzionalità in sviluppo:
-
-- report CSV;
-- infrastruttura di backup su macchina virtuale;
-- filtri avanzati sui file;
-- backup incrementale.
