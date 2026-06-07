@@ -428,3 +428,37 @@
 [2026-06-07 13:36:19] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=38.6
 [2026-06-07 13:37:58] [INFO] Programma terminato dall'utente
 [2026-06-07 13:37:59] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=39.68
+[2026-06-07 13:56:38] [INFO] Programma avviato
+[2026-06-07 13:56:38] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 13:56:38] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 13:56:38] [INFO] Logo pagina web | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\logo.png
+[2026-06-07 13:56:38] [INFO] Controllo iniziale backup avviato
+[2026-06-07 13:57:16] [AVVISO] Backup mancante | origine=C:\Tecnico\COMPRI_GIANLUCA\File presente in cartella origine.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\COMPRI_GIANLUCA\File presente in cartella origine.txt
+[2026-06-07 13:57:16] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-07 13:57:16] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo2.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo2.txt
+[2026-06-07 13:57:16] [INFO] Controllo iniziale backup completato | mancanti=3 | non_aggiornati=0 | errori=0 | durata_secondi=38.44
+[2026-06-07 13:57:16] [INFO] Aggiornamento periodico report attivo | intervallo_secondi=60
+[2026-06-07 13:57:16] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-07 13:57:16] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-07 13:57:16] [INFO] Sottocartelle monitorate | *
+[2026-06-07 13:58:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=41.45
+[2026-06-07 13:59:05] [AVVISO] Ripristino da backup eseguito | backup=D:\BakupAutomaticoConPythonMonitor\Tecnico\testtesttest.txt | destinazione=C:\TECNICO\testtesttest.txt
+[2026-06-07 13:59:05] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\testtesttest.txt
+[2026-06-07 13:59:05] [INFO] Backup aggiornato | origine=C:\Tecnico\testtesttest.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\testtesttest.txt
+[2026-06-07 13:59:45] [INFO] Cache report aggiornata | origine=dopo_ripristino_da_backup | file_non_coerenti=3 | durata_secondi=40.55
+[2026-06-07 14:00:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=40.47
+[2026-06-07 14:02:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.27
+[2026-06-07 14:03:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.62
+[2026-06-07 14:05:36] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.35
+[2026-06-07 14:07:15] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=38.73
+[2026-06-07 14:08:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.09
+[2026-06-07 14:10:34] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.61
+[2026-06-07 14:12:14] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.77
+[2026-06-07 14:13:53] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.06
+[2026-06-07 14:15:33] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.75
+[2026-06-07 14:17:11] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=38.47
+[2026-06-07 14:18:50] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=38.94
+[2026-06-07 14:20:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=38.82
+[2026-06-07 14:22:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=38.5
+[2026-06-07 14:23:47] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.38
+[2026-06-07 14:24:25] [INFO] Programma terminato dall'utente
