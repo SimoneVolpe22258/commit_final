@@ -7,19 +7,17 @@ Gli eventi sui file vengono salvati nel file CSV configurato in conf.conf.
 Versione con:
 - controllo iniziale del backup;
 - pagina web locale http://127.0.0.1:5000 per visualizzare file mancanti/non aggiornati;
-- copia manuale nel backup dei file selezionati dalla pagina web;
-- logo configurabile nella pagina web.
+- copia manuale nel backup dei file selezionati dalla pagina web.
 """
 
 __author__ = "Carloumberto Olivieri e Simone Volpe"
-__version__ = "Rev. 7.0 del 2026-06-07"
+__version__ = "Rev. 4.3 del 2026-06-06"
 
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs
 import csv
 import html
-import mimetypes
 import shutil
 import threading
 import time
@@ -38,21 +36,6 @@ INTESTAZIONE_CSV = [
 
 PORTA_SERVER_WEB = 5000
 HOST_SERVER_WEB = "127.0.0.1"
-
-# Il report HTML non deve fare una scansione completa a ogni refresh.
-# La scansione viene salvata in cache e aggiornata periodicamente oppure su richiesta.
-INTERVALLO_AGGIORNAMENTO_REPORT = 60
-MAX_RIGHE_REPORT = 500
-
-cache_report = {
-    "risultati": [],
-    "ultimo_aggiornamento": "mai",
-    "durata_secondi": 0,
-    "in_aggiornamento": False,
-    "errore": "",
-    "origine": "non ancora calcolato",
-}
-cache_report_lock = threading.Lock()
 
 
 def timestamp():
@@ -105,14 +88,11 @@ def percorsi_conf(percorso_conf):
     if not sottocartelle:
         raise ValueError("Nessuna sottocartella da monitorare indicata nel file conf.conf")
 
-    path_logo_web = configurazione.get("path_logo_web", "").strip()
-
     return (
         configurazione["path_cartella_da_osservare"],
         configurazione["path_cartella_backup"],
         sottocartelle,
         configurazione["path_file_csv"],
-        path_logo_web,
     )
 
 
@@ -231,29 +211,6 @@ def valida_percorsi(cartella_da_osservare, cartella_backup, percorso_csv, percor
     percorso_log.parent.mkdir(parents=True, exist_ok=True)
 
 
-def risolvi_percorso_logo(path_logo_web, percorso_conf):
-    """
-    Restituisce il percorso assoluto del logo configurato.
-    Se il valore nel conf.conf è relativo, viene interpretato rispetto alla cartella src,
-    cioè la cartella che contiene il file conf.conf.
-    """
-    if not path_logo_web:
-        return None
-
-    percorso_logo = Path(path_logo_web)
-
-    if not percorso_logo.is_absolute():
-        percorso_logo = percorso_conf.parent / percorso_logo
-
-    return percorso_logo
-
-
-def logo_disponibile(percorso_logo):
-    """
-    Verifica se il logo è configurato e leggibile come file.
-    """
-    return percorso_logo is not None and percorso_logo.exists() and percorso_logo.is_file()
-
 
 def formatta_data_modifica(timestamp_file):
     """
@@ -334,92 +291,6 @@ def trova_file_non_coerenti(cartella_da_osservare, cartella_backup, sottocartell
     return risultati
 
 
-
-def imposta_cache_report(risultati, durata_secondi=0, origine="scansione"):
-    """
-    Salva in memoria l'ultimo risultato del controllo backup.
-    La pagina web legge questa cache invece di rifare ogni volta la scansione del disco.
-    """
-    with cache_report_lock:
-        cache_report["risultati"] = list(risultati)
-        cache_report["ultimo_aggiornamento"] = timestamp()
-        cache_report["durata_secondi"] = round(durata_secondi, 2)
-        cache_report["in_aggiornamento"] = False
-        cache_report["errore"] = ""
-        cache_report["origine"] = origine
-
-
-def leggi_cache_report():
-    """
-    Restituisce una copia sicura della cache, evitando conflitti tra thread web e thread di scansione.
-    """
-    with cache_report_lock:
-        risultati = list(cache_report["risultati"])
-        meta = {
-            "ultimo_aggiornamento": cache_report["ultimo_aggiornamento"],
-            "durata_secondi": cache_report["durata_secondi"],
-            "in_aggiornamento": cache_report["in_aggiornamento"],
-            "errore": cache_report["errore"],
-            "origine": cache_report["origine"],
-        }
-    return risultati, meta
-
-
-def aggiorna_cache_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, origine="scansione"):
-    """
-    Ricalcola le anomalie del backup e aggiorna la cache del report.
-    Se una scansione è già in corso, evita di avviarne un'altra in parallelo.
-    """
-    with cache_report_lock:
-        if cache_report["in_aggiornamento"]:
-            return False
-        cache_report["in_aggiornamento"] = True
-        cache_report["errore"] = ""
-
-    inizio = time.time()
-
-    try:
-        risultati = trova_file_non_coerenti(cartella_da_osservare, cartella_backup, sottocartelle)
-        durata = time.time() - inizio
-        imposta_cache_report(risultati, durata, origine)
-        scrivi_log(
-            f"Cache report aggiornata | origine={origine} | file_non_coerenti={len(risultati)} | durata_secondi={round(durata, 2)}",
-            percorso_log,
-        )
-        return True
-
-    except Exception as errore:
-        with cache_report_lock:
-            cache_report["in_aggiornamento"] = False
-            cache_report["errore"] = str(errore)
-        scrivi_log(f"Aggiornamento cache report fallito | errore={errore}", percorso_log, "ERRORE")
-        return False
-
-
-def avvia_aggiornamento_periodico_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log):
-    """
-    Aggiorna il report in background ogni INTERVALLO_AGGIORNAMENTO_REPORT secondi.
-    Il server web resta veloce perché mostra l'ultima cache disponibile.
-    """
-    def ciclo():
-        while True:
-            time.sleep(INTERVALLO_AGGIORNAMENTO_REPORT)
-            aggiorna_cache_report(
-                cartella_da_osservare,
-                cartella_backup,
-                sottocartelle,
-                percorso_log,
-                origine="aggiornamento_periodico",
-            )
-
-    thread = threading.Thread(target=ciclo, daemon=True)
-    thread.start()
-    scrivi_log(
-        f"Aggiornamento periodico report attivo | intervallo_secondi={INTERVALLO_AGGIORNAMENTO_REPORT}",
-        percorso_log,
-    )
-
-
 def controlla_backup_iniziale(cartella_da_osservare, cartella_backup, percorso_log, sottocartelle, percorso_csv):
     """
     All'avvio confronta i file della cartella osservata con quelli nella cartella di backup.
@@ -464,7 +335,6 @@ def controlla_backup_iniziale(cartella_da_osservare, cartella_backup, percorso_l
         f"durata_secondi={durata}",
         percorso_log,
     )
-    return risultati
 
 
 def copia_file_selezionati(id_file_selezionati, cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv):
@@ -505,18 +375,14 @@ def copia_file_selezionati(id_file_selezionati, cartella_da_osservare, cartella_
     return risultati
 
 
-def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo=None, messaggio=""):
+def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, messaggio=""):
     """
-    Genera la pagina HTML usando la cache del report.
-    Non esegue scansioni del disco: il caricamento della pagina resta rapido anche con molti file.
+    Genera la pagina HTML del report. Il controllo viene rifatto ogni volta che la pagina viene aperta.
     """
-    risultati, meta = leggi_cache_report()
+    risultati = trova_file_non_coerenti(cartella_da_osservare, cartella_backup, sottocartelle)
     righe = []
-    risultati_da_mostrare = risultati[:MAX_RIGHE_REPORT]
-    totale_risultati = len(risultati)
-    risultati_nascosti = max(0, totale_risultati - len(risultati_da_mostrare))
 
-    for record in risultati_da_mostrare:
+    for record in risultati:
         id_html = html.escape(record["id"], quote=True)
         stato = html.escape(record["stato"])
         file = html.escape(record["file"])
@@ -548,25 +414,9 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
     else:
         corpo_tabella = "\n".join(righe)
 
-    messaggi = []
+    messaggio_html = ""
     if messaggio:
-        messaggi.append(html.escape(messaggio))
-    if meta["in_aggiornamento"]:
-        messaggi.append("Ricalcolo report in corso: la pagina sta mostrando l'ultima versione disponibile.")
-    if meta["errore"]:
-        messaggi.append(f"Errore nell'ultimo ricalcolo report: {html.escape(meta['errore'])}")
-    if risultati_nascosti:
-        messaggi.append(
-            f"Per velocizzare la pagina sono mostrati i primi {MAX_RIGHE_REPORT} risultati; "
-            f"altri {risultati_nascosti} non sono visualizzati. Usa 'Ricalcola ora' dopo le correzioni."
-        )
-
-    messaggio_html = "".join(f"<div class='messaggio'>{m}</div>" for m in messaggi)
-
-    if logo_disponibile(percorso_logo):
-        logo_html = '<img class="logo" src="/logo" alt="Logo">'
-    else:
-        logo_html = ''
+        messaggio_html = f"<div class='messaggio'>{html.escape(messaggio)}</div>"
 
     return f"""<!doctype html>
 <html lang="it">
@@ -575,12 +425,9 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
     <title>Report coerenza backup</title>
     <style>
         body {{ font-family: Arial, sans-serif; margin: 24px; background: #f5f5f5; color: #222; }}
-        h1 {{ margin: 0 0 4px 0; }}
+        h1 {{ margin-bottom: 4px; }}
         .box {{ background: white; padding: 18px; border-radius: 10px; box-shadow: 0 1px 5px #ccc; }}
-        .testata {{ display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }}
-        .logo {{ width: 25mm; height: 25mm; object-fit: contain; flex: 0 0 auto; }}
-        .titolo {{ flex: 1; }}
-        .info {{ color: #555; margin-bottom: 16px; line-height: 1.45; }}
+        .info {{ color: #555; margin-bottom: 16px; }}
         .messaggio {{ background: #e8f4ff; border: 1px solid #8cc8ff; padding: 10px; margin: 12px 0; border-radius: 6px; }}
         table {{ width: 100%; border-collapse: collapse; font-size: 14px; }}
         th, td {{ border-bottom: 1px solid #ddd; padding: 8px; vertical-align: top; }}
@@ -599,30 +446,20 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
 </head>
 <body>
     <div class="box">
-        <div class="testata">
-            {logo_html}
-            <div class="titolo">
-                <h1>Report coerenza backup</h1>
-                <div>Versione programma: {html.escape(__version__)}</div>
-            </div>
-        </div>
+        <h1>Report coerenza backup</h1>
         <div class="info">
-            Pagina generata: {html.escape(timestamp())}<br>
-            Ultimo ricalcolo report: {html.escape(str(meta['ultimo_aggiornamento']))}<br>
-            Origine ultimo ricalcolo: {html.escape(str(meta['origine']))}<br>
-            Durata ultimo ricalcolo: {html.escape(str(meta['durata_secondi']))} secondi<br>
+            Generato: {html.escape(timestamp())}<br>
             Cartella monitorata: {html.escape(str(cartella_da_osservare))}<br>
             Cartella backup: {html.escape(str(cartella_backup))}<br>
-            File non coerenti trovati: <strong>{totale_risultati}</strong>
+            File non coerenti trovati: <strong>{len(risultati)}</strong>
         </div>
         {messaggio_html}
         <form method="post" action="/copia">
             <div class="azioni">
-                <button type="button" onclick="selezionaTutti(true)">Seleziona tutti visibili</button>
+                <button type="button" onclick="selezionaTutti(true)">Seleziona tutti</button>
                 <button type="button" onclick="selezionaTutti(false)">Deseleziona tutti</button>
                 <button class="primario" type="submit">Copia selezionati nel backup</button>
-                <button type="button" onclick="location.reload()">Aggiorna pagina</button>
-                <button type="button" onclick="window.location='/ricalcola'">Ricalcola ora</button>
+                <button type="button" onclick="location.reload()">Aggiorna report</button>
             </div>
             <table>
                 <thead>
@@ -647,7 +484,8 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
 </body>
 </html>"""
 
-def crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv, percorso_logo=None):
+
+def crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv):
     """
     Crea l'handler HTTP con accesso ai percorsi del programma.
     """
@@ -670,65 +508,24 @@ def crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, p
                 # per ricarica, anteprima, antivirus o favicon. Non è un errore grave.
                 return
 
-        def invia_file_logo(self):
-            if not logo_disponibile(percorso_logo):
-                self.send_response(404)
-                self.end_headers()
-                return
-
-            tipo_contenuto, _ = mimetypes.guess_type(str(percorso_logo))
-            if not tipo_contenuto:
-                tipo_contenuto = "application/octet-stream"
-
-            try:
-                dati = percorso_logo.read_bytes()
-                self.send_response(200)
-                self.send_header("Content-Type", tipo_contenuto)
-                self.send_header("Content-Length", str(len(dati)))
-                self.end_headers()
-                self.wfile.write(dati)
-            except (BrokenPipeError, ConnectionAbortedError, ConnectionResetError, OSError):
-                return
-
         def do_GET(self):
-            percorso_richiesto = urlparse(self.path).path
-
-            if percorso_richiesto == "/logo":
-                self.invia_file_logo()
-                return
-
-            if percorso_richiesto == "/favicon.ico":
+            if self.path == "/favicon.ico":
                 self.send_response(204)
                 self.end_headers()
                 return
 
-            if percorso_richiesto == "/ricalcola":
-                avviato = aggiorna_cache_report(
-                    cartella_da_osservare,
-                    cartella_backup,
-                    sottocartelle,
-                    percorso_log,
-                    origine="ricalcolo_manuale",
-                )
-                messaggio = "Report ricalcolato." if avviato else "Ricalcolo già in corso: riprova tra poco."
-                contenuto = genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo, messaggio)
-                self.invia_html(contenuto)
-                return
-
-            if percorso_richiesto not in ("/", "/index.html"):
+            if self.path not in ("/", "/index.html"):
                 try:
                     self.send_error(404, "Pagina non trovata")
                 except (BrokenPipeError, ConnectionAbortedError, ConnectionResetError, OSError):
                     return
                 return
 
-            contenuto = genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo)
+            contenuto = genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle)
             self.invia_html(contenuto)
 
         def do_POST(self):
-            percorso_richiesto = urlparse(self.path).path
-
-            if percorso_richiesto != "/copia":
+            if self.path != "/copia":
                 self.send_error(404, "Pagina non trovata")
                 return
 
@@ -750,26 +547,19 @@ def crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, p
                 )
                 ok = sum(1 for _, risultato in risultati_copia if risultato == "OK")
                 errori = len(risultati_copia) - ok
-                aggiorna_cache_report(
-                    cartella_da_osservare,
-                    cartella_backup,
-                    sottocartelle,
-                    percorso_log,
-                    origine="dopo_copia_da_pagina_web",
-                )
                 messaggio = f"Copia completata: OK={ok}, errori={errori}. Il report è stato aggiornato."
 
-            contenuto = genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo, messaggio)
+            contenuto = genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, messaggio)
             self.invia_html(contenuto)
 
     return BackupReportHandler
 
 
-def avvia_server_web(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv, percorso_logo=None):
+def avvia_server_web(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv):
     """
     Avvia il server web locale in un thread separato.
     """
-    handler = crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv, percorso_logo)
+    handler = crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv)
     server = ThreadingHTTPServer((HOST_SERVER_WEB, PORTA_SERVER_WEB), handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
@@ -795,9 +585,8 @@ def monitora_cartella(cartella_da_osservare, cartella_backup, percorso_log, sott
 
             try:
                 if evento == "deleted":
-                    # Comportamento voluto: il file resta nel backup per storicizzazione.
                     scrivi_log(f"File eliminato | file={percorso_file}", percorso_log, "AVVISO")
-                    scrivi_csv(percorso_csv, evento, percorso_file, cartella_da_osservare, "NON ESEGUITO - FILE ELIMINATO - STORICIZZAZIONE")
+                    scrivi_csv(percorso_csv, evento, percorso_file, cartella_da_osservare, "NON ESEGUITO - FILE ELIMINATO")
                     continue
 
                 if not percorso_file.is_file():
@@ -824,12 +613,11 @@ def main():
     percorso_log = cartella_progetto / "log" / "monitor.log"
 
     try:
-        path_osservare, path_backup, sottocartelle, path_csv, path_logo_web = percorsi_conf(percorso_conf)
+        path_osservare, path_backup, sottocartelle, path_csv = percorsi_conf(percorso_conf)
 
         cartella_da_osservare = Path(path_osservare)
         cartella_backup = Path(path_backup)
         percorso_csv = Path(path_csv)
-        percorso_logo = risolvi_percorso_logo(path_logo_web, percorso_conf)
 
         if not percorso_csv.is_absolute():
             percorso_csv = cartella_corrente / percorso_csv
@@ -839,18 +627,9 @@ def main():
         scrivi_log("Programma avviato", percorso_log)
         scrivi_log(f"CSV eventi | percorso={percorso_csv}", percorso_log)
         scrivi_log(f"Cartella backup | percorso={cartella_backup}", percorso_log)
-        if percorso_logo:
-            if logo_disponibile(percorso_logo):
-                scrivi_log(f"Logo pagina web | percorso={percorso_logo}", percorso_log)
-            else:
-                scrivi_log(f"Logo pagina web non trovato o non leggibile | percorso={percorso_logo}", percorso_log, "AVVISO")
-        else:
-            scrivi_log("Logo pagina web non configurato", percorso_log)
 
-        risultati_iniziali = controlla_backup_iniziale(cartella_da_osservare, cartella_backup, percorso_log, sottocartelle, percorso_csv)
-        imposta_cache_report(risultati_iniziali, origine="controllo_iniziale")
-        avvia_aggiornamento_periodico_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log)
-        avvia_server_web(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv, percorso_logo)
+        controlla_backup_iniziale(cartella_da_osservare, cartella_backup, percorso_log, sottocartelle, percorso_csv)
+        avvia_server_web(cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv)
 
         print(f"--- monitor.py attivo su {cartella_da_osservare} ---")
         print(f"Apri il report backup: http://{HOST_SERVER_WEB}:{PORTA_SERVER_WEB}")

@@ -98,3 +98,251 @@
 [2026-06-04 15:32:46] Programma avviato
 [2026-06-04 15:36:41] Programma avviato
 [2026-06-04 15:37:06] Backup aggiornato: C:\Work2\backup\clienti\Nuovo documento di testo.txt
+[2026-06-05 08:40:38] [INFO] Programma avviato
+[2026-06-05 08:40:38] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-05 08:40:38] [INFO] Cartella backup | percorso=C:\Work2\backup
+[2026-06-05 08:40:38] [INFO] Monitoraggio avviato | cartella=C:\Work\marconilab
+[2026-06-05 08:40:38] [INFO] Sottocartelle monitorate | clienti, preventivi, amministrazione
+[2026-06-05 08:41:17] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Work\marconilab\clienti
+[2026-06-05 08:41:17] [AVVISO] File eliminato | file=C:\Work\marconilab\clienti\Nuovo documento di testo.txt
+[2026-06-05 08:41:25] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Work\marconilab\clienti
+[2026-06-05 08:41:25] [INFO] Evento rilevato | evento=added | file=C:\Work\marconilab\clienti\monitor(9).py
+[2026-06-05 08:41:25] [INFO] Backup aggiornato | origine=C:\Work\marconilab\clienti\monitor(9).py | destinazione=C:\Work2\backup\clienti\monitor(9).py
+[2026-06-05 08:41:25] [INFO] Evento rilevato | evento=modified | file=C:\Work\marconilab\clienti\monitor(9).py
+[2026-06-05 08:41:25] [INFO] Backup aggiornato | origine=C:\Work\marconilab\clienti\monitor(9).py | destinazione=C:\Work2\backup\clienti\monitor(9).py
+[2026-06-05 08:42:07] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Work\marconilab\clienti
+[2026-06-05 08:42:07] [INFO] Evento rilevato | evento=added | file=C:\Work\marconilab\clienti\Nuovo documento di testo.txt
+[2026-06-05 08:42:07] [INFO] Backup aggiornato | origine=C:\Work\marconilab\clienti\Nuovo documento di testo.txt | destinazione=C:\Work2\backup\clienti\Nuovo documento di testo.txt
+[2026-06-05 08:58:56] Programma avviato
+[2026-06-05 08:59:40] Eliminato file nella cartella monitorata
+[2026-06-05 08:59:40] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Work\marconilab\clienti
+[2026-06-05 08:59:40] [AVVISO] File eliminato | file=C:\Work\marconilab\clienti\Nuovo documento di testo.txt
+[2026-06-05 08:59:40] [INFO] Evento rilevato | evento=added | file=C:\Work\marconilab\clienti\p.txt
+[2026-06-05 08:59:40] Backup aggiornato: C:\Work2\backup\clienti\p.txt
+[2026-06-05 08:59:40] [INFO] Backup aggiornato | origine=C:\Work\marconilab\clienti\p.txt | destinazione=C:\Work2\backup\clienti\p.txt
+[2026-06-05 08:59:47] Eliminato file nella cartella monitorata
+[2026-06-05 08:59:47] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Work\marconilab\clienti
+[2026-06-05 08:59:47] [AVVISO] File eliminato | file=C:\Work\marconilab\clienti\p.txt
+[2026-06-05 08:59:47] [INFO] Evento rilevato | evento=added | file=C:\Work\marconilab\clienti\pippo.txt
+[2026-06-05 08:59:47] [INFO] Backup aggiornato | origine=C:\Work\marconilab\clienti\pippo.txt | destinazione=C:\Work2\backup\clienti\pippo.txt
+[2026-06-05 09:04:15] [INFO] Programma avviato
+[2026-06-05 09:04:15] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-05 09:04:15] [INFO] Cartella backup | percorso=C:\Work2\backup
+[2026-06-05 09:04:15] [INFO] Monitoraggio avviato | cartella=C:\Work\marconilab
+[2026-06-05 09:04:15] [INFO] Sottocartelle monitorate | clienti, preventivi, amministrazione
+[2026-06-05 09:04:24] [INFO] Programma terminato dall'utente
+[2026-06-05 09:16:17] [INFO] Programma avviato
+[2026-06-05 09:16:17] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-05 09:16:17] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\backup
+[2026-06-05 09:16:17] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-05 09:16:17] [INFO] Sottocartelle monitorate | *
+[2026-06-05 09:20:05] [AVVISO] File eliminato | file=C:\Tecnico\disegni mod\piastra.var
+[2026-06-05 09:20:05] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\disegni mod
+[2026-06-05 09:20:12] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\disegni mod\Nuovo documento di testo.txt
+[2026-06-05 09:20:12] [INFO] Backup aggiornato | origine=C:\Tecnico\disegni mod\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\backup\disegni mod\Nuovo documento di testo.txt
+[2026-06-05 09:20:12] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\disegni mod
+[2026-06-05 09:21:57] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BARBARA\BORIN
+[2026-06-05 09:21:57] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BARBARA\BORIN\Nuovo documento di testo.txt
+[2026-06-05 09:21:58] [INFO] Backup aggiornato | origine=C:\Tecnico\BARBARA\BORIN\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\backup\BARBARA\BORIN\Nuovo documento di testo.txt
+[2026-06-05 09:23:21] [INFO] Programma terminato dall'utente
+[2026-06-05 09:24:32] [INFO] Programma avviato
+[2026-06-05 09:24:32] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-05 09:24:32] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-05 09:24:32] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-05 09:24:32] [INFO] Sottocartelle monitorate | *
+[2026-06-05 09:24:59] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder
+[2026-06-05 09:24:59] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt
+[2026-06-05 09:24:59] [INFO] Backup aggiornato | origine=C:\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt
+[2026-06-05 09:25:44] [INFO] Programma terminato dall'utente
+[2026-06-05 09:28:00] [INFO] Programma avviato
+[2026-06-05 09:28:00] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-05 09:28:00] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-05 09:28:00] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-05 09:28:00] [INFO] Sottocartelle monitorate | *
+[2026-06-05 09:29:24] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\blocchi_dxf\Nuovo documento di testo.txt
+[2026-06-05 09:29:24] [INFO] Backup aggiornato | origine=C:\Tecnico\blocchi_dxf\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\blocchi_dxf\Nuovo documento di testo.txt
+[2026-06-05 09:29:24] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\blocchi_dxf
+[2026-06-05 18:18:41] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BARBARA\BORIN\Nuovo documento di testo.txt
+[2026-06-05 18:18:41] [INFO] Backup aggiornato | origine=C:\Tecnico\BARBARA\BORIN\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BARBARA\BORIN\Nuovo documento di testo.txt
+[2026-06-05 18:19:39] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\blocchi_dxf\Nuovo documento di testo.txt
+[2026-06-05 18:19:39] [INFO] Backup aggiornato | origine=C:\Tecnico\blocchi_dxf\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\blocchi_dxf\Nuovo documento di testo.txt
+[2026-06-05 19:13:40] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt
+[2026-06-05 19:13:40] [INFO] Backup aggiornato | origine=C:\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt
+[2026-06-05 19:19:38] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\disegni mod\Nuovo documento di testo.txt
+[2026-06-05 19:19:38] [INFO] Backup aggiornato | origine=C:\Tecnico\disegni mod\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\disegni mod\Nuovo documento di testo.txt
+[2026-06-05 20:22:14] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG.ecad
+[2026-06-05 20:22:15] [INFO] Backup aggiornato | origine=C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG.ecad
+[2026-06-05 20:22:15] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.dxf
+[2026-06-05 20:22:15] [INFO] Backup aggiornato | origine=C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.dxf
+[2026-06-05 20:22:16] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.lsr
+[2026-06-05 20:22:16] [INFO] Backup aggiornato | origine=C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.lsr
+[2026-06-06 09:56:56] [INFO] Programma avviato
+[2026-06-06 09:56:56] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-06 09:56:56] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-06 09:56:56] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-06 09:56:56] [INFO] Sottocartelle monitorate | *
+[2026-06-06 13:32:42] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-06 13:32:42] [INFO] Backup aggiornato | origine=C:\Tecnico\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\Nuovo documento di testo.txt
+[2026-06-06 13:32:46] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\test.txt
+[2026-06-06 13:32:46] [INFO] Backup aggiornato | origine=C:\Tecnico\test.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\test.txt
+[2026-06-06 13:32:46] [AVVISO] File eliminato | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-06 13:32:57] [AVVISO] File eliminato | file=C:\Tecnico\test.txt
+[2026-06-06 13:42:53] [INFO] Programma avviato
+[2026-06-06 13:42:53] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-06 13:42:53] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-06 13:42:53] [INFO] Controllo iniziale backup avviato
+[2026-06-06 13:43:28] [INFO] Controllo iniziale backup completato | file_controllati=72268 | mancanti=0 | non_aggiornati=0 | errori=0 | durata_secondi=35.06
+[2026-06-06 13:43:28] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-06 13:43:28] [INFO] Sottocartelle monitorate | *
+[2026-06-06 13:47:10] [INFO] Programma terminato dall'utente
+[2026-06-06 13:47:15] [INFO] Programma avviato
+[2026-06-06 13:47:15] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-06 13:47:15] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-06 13:47:15] [INFO] Controllo iniziale backup avviato
+[2026-06-06 13:47:50] [INFO] Controllo iniziale backup completato | file_controllati=72268 | mancanti=0 | non_aggiornati=0 | errori=0 | durata_secondi=35.39
+[2026-06-06 13:47:50] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-06 13:47:50] [INFO] Sottocartelle monitorate | *
+[2026-06-06 14:47:34] [INFO] Programma avviato
+[2026-06-06 14:47:34] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-06 14:47:34] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-06 14:47:34] [INFO] Controllo iniziale backup avviato
+[2026-06-06 14:48:13] [INFO] Controllo iniziale backup completato | mancanti=0 | non_aggiornati=0 | errori=0 | durata_secondi=39.41
+[2026-06-06 14:48:13] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-06 14:48:13] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-06 14:48:13] [INFO] Sottocartelle monitorate | *
+[2026-06-06 14:52:02] [INFO] Programma terminato dall'utente
+[2026-06-06 14:52:19] [INFO] Programma avviato
+[2026-06-06 14:52:19] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-06 14:52:19] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-06 14:52:19] [INFO] Controllo iniziale backup avviato
+[2026-06-06 14:52:56] [INFO] Controllo iniziale backup completato | mancanti=0 | non_aggiornati=0 | errori=0 | durata_secondi=36.56
+[2026-06-06 14:52:56] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-06 14:52:56] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-06 14:52:56] [INFO] Sottocartelle monitorate | *
+[2026-06-06 14:55:50] [INFO] Programma terminato dall'utente
+[2026-06-06 14:55:54] [INFO] Programma avviato
+[2026-06-06 14:55:54] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-06 14:55:54] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-06 14:55:54] [INFO] Controllo iniziale backup avviato
+[2026-06-06 14:56:31] [INFO] Controllo iniziale backup completato | mancanti=0 | non_aggiornati=0 | errori=0 | durata_secondi=36.78
+[2026-06-06 14:56:31] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-06 14:56:31] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-06 14:56:31] [INFO] Sottocartelle monitorate | *
+[2026-06-06 15:02:39] [INFO] Programma avviato
+[2026-06-06 15:02:39] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-06 15:02:39] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-06 15:02:39] [INFO] Controllo iniziale backup avviato
+[2026-06-06 15:03:13] [INFO] Controllo iniziale backup completato | file_controllati=72268 | mancanti=0 | non_aggiornati=0 | errori=0 | durata_secondi=34.44
+[2026-06-06 15:03:13] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-06 15:03:13] [INFO] Sottocartelle monitorate | *
+[2026-06-07 10:52:27] [INFO] Programma avviato
+[2026-06-07 10:52:27] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 10:52:27] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 10:52:27] [INFO] Controllo iniziale backup avviato
+[2026-06-07 10:52:27] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-07 10:53:28] [INFO] Controllo iniziale backup completato | file_controllati=72269 | mancanti=1 | non_aggiornati=0 | errori=0 | durata_secondi=61.23
+[2026-06-07 10:53:28] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-07 10:53:28] [INFO] Sottocartelle monitorate | *
+[2026-06-07 10:55:58] [INFO] Programma avviato
+[2026-06-07 10:55:58] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 10:55:58] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 10:55:58] [INFO] Controllo iniziale backup avviato
+[2026-06-07 10:56:39] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-07 10:56:39] [INFO] Controllo iniziale backup completato | mancanti=1 | non_aggiornati=0 | errori=0 | durata_secondi=40.97
+[2026-06-07 10:56:39] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-07 10:56:39] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-07 10:56:39] [INFO] Sottocartelle monitorate | *
+[2026-06-07 10:58:40] [INFO] Backup aggiornato | origine=C:\TECNICO\pippo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-07 11:15:43] [INFO] Programma terminato dall'utente
+[2026-06-07 11:15:43] [INFO] Programma avviato
+[2026-06-07 11:15:43] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 11:15:43] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 11:15:43] [AVVISO] Logo pagina web non trovato o non leggibile | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\logo.png
+[2026-06-07 11:15:43] [INFO] Controllo iniziale backup avviato
+[2026-06-07 11:16:21] [INFO] Controllo iniziale backup completato | mancanti=0 | non_aggiornati=0 | errori=0 | durata_secondi=38.23
+[2026-06-07 11:16:21] [INFO] Aggiornamento periodico report attivo | intervallo_secondi=60
+[2026-06-07 11:16:21] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-07 11:16:22] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-07 11:16:22] [INFO] Sottocartelle monitorate | *
+[2026-06-07 11:17:00] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:17:00] [INFO] Backup aggiornato | origine=C:\Tecnico\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:17:00] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:17:00] [INFO] Backup aggiornato | origine=C:\Tecnico\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:17:06] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\pippo2.txt
+[2026-06-07 11:17:06] [INFO] Backup aggiornato | origine=C:\Tecnico\pippo2.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo2.txt
+[2026-06-07 11:17:06] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\pippo2.txt
+[2026-06-07 11:17:06] [AVVISO] File eliminato | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:17:06] [INFO] Backup aggiornato | origine=C:\Tecnico\pippo2.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo2.txt
+[2026-06-07 11:17:06] [AVVISO] File eliminato | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:18:00] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=38.4
+[2026-06-07 11:18:54] [INFO] Programma terminato dall'utente
+[2026-06-07 11:19:08] [INFO] Cache report aggiornata | origine=ricalcolo_manuale | file_non_coerenti=0 | durata_secondi=39.97
+[2026-06-07 11:21:25] [INFO] Evento ignorato: non è un file | evento=added | percorso=C:\Tecnico\Nuova cartella
+[2026-06-07 11:21:30] [AVVISO] File eliminato | file=C:\Tecnico\Nuova cartella
+[2026-06-07 11:21:34] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:21:34] [INFO] Backup aggiornato | origine=C:\Tecnico\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:21:43] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\pippo3.txt
+[2026-06-07 11:21:43] [INFO] Backup aggiornato | origine=C:\Tecnico\pippo3.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo3.txt
+[2026-06-07 11:21:43] [AVVISO] File eliminato | file=C:\Tecnico\Nuovo documento di testo.txt
+[2026-06-07 11:24:08] [INFO] Programma avviato
+[2026-06-07 11:24:08] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 11:24:08] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 11:24:08] [AVVISO] Logo pagina web non trovato o non leggibile | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\logo.png
+[2026-06-07 11:24:08] [INFO] Controllo iniziale backup avviato
+[2026-06-07 11:24:48] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-07 11:24:48] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo2.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo2.txt
+[2026-06-07 11:24:48] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo3.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo3.txt
+[2026-06-07 11:24:48] [INFO] Controllo iniziale backup completato | mancanti=3 | non_aggiornati=0 | errori=0 | durata_secondi=39.67
+[2026-06-07 11:24:48] [INFO] Aggiornamento periodico report attivo | intervallo_secondi=60
+[2026-06-07 11:24:48] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-07 11:24:48] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-07 11:24:48] [INFO] Sottocartelle monitorate | *
+[2026-06-07 11:29:07] [INFO] Programma avviato
+[2026-06-07 11:29:07] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 11:29:07] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 11:29:07] [AVVISO] Logo pagina web non trovato o non leggibile | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\logo.png
+[2026-06-07 11:29:07] [INFO] Controllo iniziale backup avviato
+[2026-06-07 11:29:27] [INFO] Programma terminato dall'utente
+[2026-06-07 11:31:13] [INFO] Programma avviato
+[2026-06-07 11:31:13] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 11:31:13] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 11:31:13] [INFO] Logo pagina web | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\logo.png
+[2026-06-07 11:31:13] [INFO] Controllo iniziale backup avviato
+[2026-06-07 11:31:51] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-07 11:31:51] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo2.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo2.txt
+[2026-06-07 11:31:51] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo3.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo3.txt
+[2026-06-07 11:31:51] [INFO] Controllo iniziale backup completato | mancanti=3 | non_aggiornati=0 | errori=0 | durata_secondi=38.1
+[2026-06-07 11:31:51] [INFO] Aggiornamento periodico report attivo | intervallo_secondi=60
+[2026-06-07 11:31:51] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-07 11:31:51] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-07 11:31:51] [INFO] Sottocartelle monitorate | *
+[2026-06-07 11:33:01] [INFO] Backup aggiornato | origine=C:\TECNICO\pippo3.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo3.txt
+[2026-06-07 11:33:04] [INFO] Backup aggiornato | origine=C:\TECNICO\pippo3.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo3.txt
+[2026-06-07 11:33:11] [INFO] Backup aggiornato | origine=C:\TECNICO\pippo3.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo3.txt
+[2026-06-07 11:33:30] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=38.92
+[2026-06-07 11:34:29] [INFO] Cache report aggiornata | origine=ricalcolo_manuale | file_non_coerenti=2 | durata_secondi=40.57
+[2026-06-07 11:35:09] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=38.53
+[2026-06-07 11:36:47] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=38.54
+[2026-06-07 11:38:07] [INFO] Cache report aggiornata | origine=ricalcolo_manuale | file_non_coerenti=2 | durata_secondi=39.84
+[2026-06-07 11:39:25] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=38.22
+[2026-06-07 11:40:36] [INFO] Programma terminato dall'utente
+[2026-06-07 11:41:05] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=39.54
+[2026-06-07 11:42:32] [INFO] Programma avviato
+[2026-06-07 11:42:32] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-07 11:42:32] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-07 11:42:32] [INFO] Logo pagina web | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\logo.png
+[2026-06-07 11:42:32] [INFO] Controllo iniziale backup avviato
+[2026-06-07 11:43:10] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-07 11:43:10] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo2.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo2.txt
+[2026-06-07 11:43:10] [INFO] Controllo iniziale backup completato | mancanti=2 | non_aggiornati=0 | errori=0 | durata_secondi=38.24
+[2026-06-07 11:43:10] [INFO] Aggiornamento periodico report attivo | intervallo_secondi=60
+[2026-06-07 11:43:10] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-07 11:43:10] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-07 11:43:10] [INFO] Sottocartelle monitorate | *
+[2026-06-07 11:44:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=38.38
+[2026-06-07 11:46:27] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=38.44
+[2026-06-07 11:47:33] [INFO] Programma terminato dall'utente
+[2026-06-07 11:48:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=40.5
+[2026-06-07 11:49:46] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=38.81
+[2026-06-07 11:51:26] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=39.72
+[2026-06-07 11:53:05] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=39.11

@@ -7,3 +7,55 @@ data_ora;evento;file;dimensione;ultima_modifica;backup
 2026-06-04 10:50:23;creazione;clienti\Nuovo documento di testo.txt;0;2026-06-04 10:50:23;OK
 2026-06-04 10:50:33;eliminazione;clienti\Nuovo documento di testo.txt;N/D;N/D;NON CANCELLATO
 2026-06-04 15:37:06;added;clienti\Nuovo documento di testo.txt;0;2026-06-04 15:37:06;OK
+2026-06-05 08:41:17;deleted;clienti\Nuovo documento di testo.txt;C:\Work\marconilab\clienti\Nuovo documento di testo.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-05 08:41:25;added;clienti\monitor(9).py;C:\Work\marconilab\clienti\monitor(9).py;9386;2026-06-05 08:39:29;OK
+2026-06-05 08:41:25;modified;clienti\monitor(9).py;C:\Work\marconilab\clienti\monitor(9).py;9386;2026-06-05 08:39:29;OK
+2026-06-05 08:42:07;added;clienti\Nuovo documento di testo.txt;C:\Work\marconilab\clienti\Nuovo documento di testo.txt;0;2026-06-05 08:42:07;OK
+2026-06-05 08:59:40;deleted;clienti\Nuovo documento di testo.txt;N/D;N/D;NON CANCELLATO
+2026-06-05 08:59:40;deleted;clienti\Nuovo documento di testo.txt;C:\Work\marconilab\clienti\Nuovo documento di testo.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-05 08:59:40;added;clienti\p.txt;0;2026-06-05 08:42:07;OK
+2026-06-05 08:59:40;added;clienti\p.txt;C:\Work\marconilab\clienti\p.txt;0;2026-06-05 08:42:07;OK
+2026-06-05 08:59:47;deleted;clienti\p.txt;N/D;N/D;NON CANCELLATO
+2026-06-05 08:59:47;added;clienti\pippo.txt;0;2026-06-05 08:42:07;OK
+2026-06-05 08:59:47;deleted;clienti\p.txt;C:\Work\marconilab\clienti\p.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-05 08:59:47;added;clienti\pippo.txt;C:\Work\marconilab\clienti\pippo.txt;0;2026-06-05 08:42:07;OK
+2026-06-05 09:20:05;deleted;disegni mod\piastra.var;C:\Tecnico\disegni mod\piastra.var;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-05 09:20:12;added;disegni mod\Nuovo documento di testo.txt;C:\Tecnico\disegni mod\Nuovo documento di testo.txt;0;2026-06-05 09:20:12;OK
+2026-06-05 09:21:58;added;BARBARA\BORIN\Nuovo documento di testo.txt;C:\Tecnico\BARBARA\BORIN\Nuovo documento di testo.txt;0;2026-06-05 09:21:57;OK
+2026-06-05 09:24:59;added;BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt;C:\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt;0;2026-06-05 09:24:58;OK
+2026-06-05 09:29:24;added;blocchi_dxf\Nuovo documento di testo.txt;C:\Tecnico\blocchi_dxf\Nuovo documento di testo.txt;0;2026-06-05 09:29:24;OK
+2026-06-05 18:18:41;modified;BARBARA\BORIN\Nuovo documento di testo.txt;C:\Tecnico\BARBARA\BORIN\Nuovo documento di testo.txt;0;2026-06-05 09:21:57;OK
+2026-06-05 18:19:39;modified;blocchi_dxf\Nuovo documento di testo.txt;C:\Tecnico\blocchi_dxf\Nuovo documento di testo.txt;0;2026-06-05 09:29:24;OK
+2026-06-05 19:13:40;modified;BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt;C:\Tecnico\BRIEDA\VARIE_IN_ DISCUSSIONE\New_folder\Nuovo documento di testo.txt;0;2026-06-05 09:24:58;OK
+2026-06-05 19:19:38;modified;disegni mod\Nuovo documento di testo.txt;C:\Tecnico\disegni mod\Nuovo documento di testo.txt;0;2026-06-05 09:20:12;OK
+2026-06-05 20:22:15;modified;DULEVO\DisegniDU\46XXX\7020046WWG.ecad;C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG.ecad;15000;2026-06-05 08:19:40;OK
+2026-06-05 20:22:15;modified;DULEVO\DisegniDU\46XXX\7020046WWG_SV4.dxf;C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.dxf;116700;2026-06-05 08:19:00;OK
+2026-06-05 20:22:16;modified;DULEVO\DisegniDU\46XXX\7020046WWG_SV4.lsr;C:\Tecnico\DULEVO\DisegniDU\46XXX\7020046WWG_SV4.lsr;93357;2026-06-05 08:18:52;OK
+2026-06-06 13:32:42;added;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;0;2026-06-06 13:32:42;OK
+2026-06-06 13:32:46;added;test.txt;C:\Tecnico\test.txt;0;2026-06-06 13:32:42;OK
+2026-06-06 13:32:46;deleted;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-06 13:32:57;deleted;test.txt;C:\Tecnico\test.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-07 10:52:27;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 10:56:39;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 10:58:40;copia_da_pagina_web;pippo.txt;C:\TECNICO\pippo.txt;0;2026-06-07 10:51:37;OK
+2026-06-07 11:17:00;added;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;0;2026-06-07 11:17:00;OK
+2026-06-07 11:17:00;added;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;0;2026-06-07 11:17:00;OK
+2026-06-07 11:17:06;added;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;OK
+2026-06-07 11:17:06;deleted;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-07 11:17:06;added;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;OK
+2026-06-07 11:17:06;deleted;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO - STORICIZZAZIONE
+2026-06-07 11:21:30;deleted;Nuova cartella;C:\Tecnico\Nuova cartella;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-07 11:21:34;added;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;0;2026-06-07 11:21:33;OK
+2026-06-07 11:21:43;added;pippo3.txt;C:\Tecnico\pippo3.txt;0;2026-06-07 11:21:33;OK
+2026-06-07 11:21:43;deleted;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;N/D;N/D;NON ESEGUITO - FILE ELIMINATO
+2026-06-07 11:24:48;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 11:24:48;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP
+2026-06-07 11:24:48;controllo_iniziale;pippo3.txt;C:\Tecnico\pippo3.txt;0;2026-06-07 11:21:33;MANCANTE IN BACKUP
+2026-06-07 11:31:51;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 11:31:51;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP
+2026-06-07 11:31:51;controllo_iniziale;pippo3.txt;C:\Tecnico\pippo3.txt;0;2026-06-07 11:21:33;MANCANTE IN BACKUP
+2026-06-07 11:33:01;copia_da_pagina_web;pippo3.txt;C:\TECNICO\pippo3.txt;0;2026-06-07 11:21:33;OK
+2026-06-07 11:33:04;copia_da_pagina_web;pippo3.txt;C:\TECNICO\pippo3.txt;0;2026-06-07 11:21:33;OK
+2026-06-07 11:33:11;copia_da_pagina_web;pippo3.txt;C:\TECNICO\pippo3.txt;0;2026-06-07 11:21:33;OK
+2026-06-07 11:43:10;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 11:43:10;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP

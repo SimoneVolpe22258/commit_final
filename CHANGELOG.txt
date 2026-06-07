@@ -1,226 +1,53 @@
 CHANGELOG
 
 Progetto: Sistema di Backup e Monitoraggio
-Classe: 3SI Serale
-Anno scolastico: 2025-2026
-
-Studenti:
-- Carloumberto Olivieri
-- Simone Volpe
 
 ==================================================
-Versione 1.0 - 20/05/2026
+Versione 5.0 - 06/06/2026
 ==================================================
 
-Attività svolte in laboratorio:
+- Implementato controllo iniziale di coerenza del backup.
+- Rilevazione file mancanti nel backup.
+- Rilevazione backup non aggiornati.
+- Implementata pagina web locale.
+- Visualizzazione anomalie tramite report HTML.
+- Selezione multipla dei file.
+- Copia manuale dei file dal report.
+- Migliorata la validazione dei percorsi.
+- Introdotto server HTTP locale.
+- Utilizzo di thread dedicato per il server web.
 
-- Presentazione del progetto interdisciplinare.
-- Analisi dei requisiti richiesti dal capitolato.
-- Studio dello scenario aziendale proposto.
-- Definizione della struttura iniziale del programma.
-- Creazione del file Python principale. (derivato da guardiano)
-- Implementazione della funzione scrivi_log().
-- Implementazione della funzione main().
-- Definizione del percorso iniziale della cartella da monitorare.
-- Inserimento della libreria watchfiles per il futuro monitoraggio.
-
-Stato del progetto:
-Prima versione funzionante dello scheletro applicativo.
-
-==================================================
-Versione 1.1 - 21/05/2026
-==================================================
-
-Attività di progettazione e revisione:
-
-- Analizzata la struttura generale del progetto.
-- Separata la cartella del progetto dalla cartella aziendale monitorata.
-- Confermato il percorso:
-
-  C:\Work\marconilab
-
-  come area di monitoraggio.
-
-- Confermato il percorso:
-
-  C:\venv\commit_final
-
-  come ambiente virtuale Python.
-
-- Definita la funzione monitora_cartella() per separare il monitoraggio dalla funzione principale.
-- Migliorata la documentazione interna del codice mediante docstring e commenti.
-- Definita la struttura iniziale del README.md.
-- Definita la struttura iniziale del Giornale di Bordo.
-- Stabilita la modalità di lavoro condivisa tra i componenti del gruppo.
-
-Stato del progetto:
-Struttura logica del programma definita.
-Monitoraggio con watchfiles predisposto ma non ancora collegato alla registrazione completa degli eventi.
+Stato:
+Sistema dotato di interfaccia web per verifica e riallineamento del backup.
 
 ==================================================
-Versione 1.2 -    22/05/2026
+Versione 6.0 - 07/06/2026
 ==================================================
 
-Attività di progettazione e revisione:
+- Implementato sistema di cache del report.
+- Eliminata la scansione completa del filesystem ad ogni refresh.
+- Aggiornamento periodico automatico del report.
+- Aggiunto pulsante "Ricalcola ora".
+- Aggiunto pulsante "Aggiorna pagina".
+- Limitazione del numero di righe visualizzate.
+- Inseriti dati statistici sul ricalcolo.
+- Migliorata la gestione concorrente tramite lock.
 
-- Implementazione scrittura eventi in file di log
-- Riscontrato errore funzionamento in ambiente virtuale Python
-- Interazione con gem e per sistemazione percorso con libreria os
-- aggiornamento commenti e sistemazioni estetiche
-- Gestione degli eventi di creazione, modifica ed eliminazione file.
-- Test funzionali del sistema.
-
-Stato del progetto:
-Monitoraggio con watchfiles predisposto e collegato alla registrazione completa degli eventi in log.
-Corretto bub percorsi file log (per utilizzo in ambiente virtuale)
-
-==================================================
-Versione 1.3 -    26/05/2026
-==================================================
-
-Attività di progettazione e revisione:
-
-- Revisione percorsi dei file con utilizzo libreria pathlib
-- Test di funzionamento sia in ambiente foreground che backgrond
-- Inserimento e predisposizione funzioni che si intendono implementare a breve
-	(come da accordi col cliente durante Audit 25/05/2026)
-
-- Test funzionali del sistema.
-
-Stato del progetto:
-Programma funzionante pronto per implementazione backup e report di backup.
+Stato:
+Report web notevolmente più veloce su archivi di grandi dimensioni.
 
 ==================================================
-Versione 2.0 - 28/05/2026
+Versione 7.0 - 07/06/2026
 ==================================================
 
-Attività di progettazione e revisione:
+- Implementato logo configurabile nella pagina web.
+- Aggiunto parametro path_logo_web nel file conf.conf.
+- Gestione percorsi relativi e assoluti del logo.
+- Endpoint HTTP dedicato alla distribuzione del logo.
+- Inserito logo nell'intestazione del report.
+- Visualizzazione versione software nella pagina web.
+- Confermata la storicizzazione dei file eliminati.
+- Migliorata la documentazione del progetto.
 
-- Implementata la funzione percorsi_conf() per la lettura dei percorsi da file di configurazione esterno.
-- Introdotto il file conf.conf per la gestione centralizzata dei parametri del programma.
-- Eliminata la dipendenza dai percorsi definiti direttamente nel codice sorgente.
-- Predisposta la gestione della cartella di backup tramite configurazione.
-- Inserita la funzione backup() come struttura iniziale per le future funzionalità di salvataggio automatico.
-- Aggiornata la funzione main() per utilizzare i percorsi caricati dinamicamente.
-- Migliorata la modularità del programma separando configurazione e logica applicativa.
-- Eseguiti test di lettura configurazione e monitoraggio della cartella aziendale.
-- Verificata la compatibilità del programma con differenti percorsi di lavoro.
-
-Stato del progetto:
-Sistema di monitoraggio pienamente funzionante con configurazione esterna dei percorsi.
-Predisposta l'architettura necessaria all'implementazione del sistema di backup automatico che verrà sviluppato nelle revisioni successive.
-
-==================================================
-Versione 3.0 - 30/05/2026
-==================================================
-
-Attività di progettazione e revisione:
-
-- Implementata la funzione backup() per la copia automatica dei file monitorati.
-- Inserita la libreria shutil per la gestione delle operazioni di backup.
-- Integrato il sistema di backup con il monitoraggio degli eventi rilevati da watchfiles.
-- Aggiornata la funzione monitora_cartella() per l'esecuzione automatica del backup dopo ogni modifica rilevata.
-- Implementata la copia dei file mantenendo la struttura originale delle sottocartelle.
-- Aggiunta la creazione automatica delle directory mancanti nella cartella di destinazione.
-- Introdotto il calcolo dei percorsi relativi tramite pathlib per garantire la corretta organizzazione dei backup.
-- Implementata la registrazione nel file di log delle operazioni di backup eseguite.
-- Inserita la gestione delle eccezioni durante le operazioni di copia e sincronizzazione.
-- Migliorata la creazione automatica della cartella log in caso di assenza.
-- Eseguiti test funzionali di monitoraggio, copia e aggiornamento dei file nella cartella di backup.
-- Verificata la corretta sincronizzazione tra cartella monitorata e repository di backup.
-
-Stato del progetto:
-Sistema di monitoraggio e backup completamente operativo.
-Le modifiche rilevate nella cartella aziendale vengono registrate nel file di log e replicate automaticamente nella cartella di backup mantenendo la struttura originale delle directory.
-Il progetto risulta pronto per l'implementazione delle funzionalità di reportistica e gestione avanzata dei backup.
-
-
-==================================================
-Versione 3.2 - 01/06/2026 solo simone
-==================================================
-
-Attività di progettazione e revisione: (solo simone)
-
-Nuove funzionalità
-- Aggiunta la gestione della configurazione sottocartelle_da_monitorare nel file conf.conf.
-- Implementato il filtro degli eventi per limitare il monitoraggio alle sole sottocartelle configurate.
-- Spostato il caricamento del file di configurazione su percorso assoluto basato sulla posizione dello script.
-- Aggiunto controllo preventivo sulle righe del file di configurazione:
-	ignora righe vuote;
-	ignora commenti (#);
-	ignora righe prive del carattere =.
-	Durante l'ultima revisione del progetto è stata aggiornata la documentazione tecnica per allinearla alla versione software 3.2. 
-
-	Sono state documentate le nuove funzionalità di configurazione tramite file conf.conf, il monitoraggio selettivo delle sottocartelle, 
-	il sistema di backup che mantiene la struttura originale delle directory e la gestione degli errori durante le operazioni di copia. 
-
-Attenzione Nel codice non esiste alcuna implementazione CSV.
-Funzionalità prevista ma non ancora implementata.
-
-==================================================
-Versione 4.0 - 04/06/2026
-==================================================
-
-Attività di progettazione e revisione:
-
-- Implementata la funzione scrivi_csv() per la generazione automatica del report CSV.
-- Inserita la configurazione del percorso del file CSV tramite parametro path_file_csv nel file conf.conf.
-- Separata la gestione delle informazioni operative del programma dagli eventi relativi ai file monitorati.
-- Modificata la funzione scrivi_log() affinché registri esclusivamente:
-    avvio del programma;
-    arresto del programma;
-    operazioni di backup;
-    errori durante il backup;
-    eliminazione di file monitorati.
-
-- Aggiornata la funzione monitora_cartella() per registrare gli eventi dei file nel report CSV.
-- Utilizzati direttamente gli eventi restituiti dalla libreria watchfiles:
-    added;
-    modified;
-    deleted.
-- Implementata la registrazione nel CSV delle seguenti informazioni:
-    data e ora evento;
-    tipo evento;
-    percorso relativo del file;
-    dimensione file;
-    data ultima modifica;
-    esito backup.
-
-- Implementata la gestione delle eliminazioni:
-    il file eliminato viene registrato nel CSV;
-    viene registrata l'eliminazione nel file di log;
-    la copia eventualmente presente nella cartella di backup non viene eliminata.
-
-- Inserita la gestione dell'arresto controllato del programma tramite Ctrl + C.
-- Aggiornata la documentazione README.md per allineamento alla revisione 4.0.
-- Eseguiti test funzionali di:
-    creazione file;
-    modifica file;
-    eliminazione file;
-    generazione report CSV;
-    aggiornamento backup;
-    arresto controllato del monitoraggio.
-
-Stato del progetto:
-
-Sistema di monitoraggio e backup pienamente operativo.
-
-Le informazioni operative vengono registrate nel file di log.
-Gli eventi relativi ai file monitorati vengono registrati nel report CSV.
-Il backup automatico mantiene la struttura originale delle cartelle e conserva le copie dei file eliminati.
-
-Funzionalità completate:
-- monitoraggio cartelle;
-- configurazione tramite file conf.conf;
-- backup automatico;
-- report CSV;
-- gestione eliminazioni;
-- arresto controllato del programma.
-
-Funzionalità ancora da implementare:
-- utilizzo della macchina virtuale come server di backup;
-- backup incrementale;
-- filtri avanzati sulle estensioni dei file;
-- eventuali richieste aggiuntive del cliente.
-
-
+Stato:
+Sistema completo di monitoraggio, backup, controllo di coerenza e reportistica web configurabile.
