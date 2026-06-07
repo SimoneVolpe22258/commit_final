@@ -1,53 +1,216 @@
-CHANGELOG
 
+CHANGELOG DETTAGLIATO
 Progetto: Sistema di Backup e Monitoraggio
+Autori: Carloumberto Olivieri - Simone Volpe
+Anno scolastico: 2025-2026
 
 ==================================================
-Versione 5.0 - 06/06/2026
+VERSIONE 1.0 - 20/05/2026
 ==================================================
+- Avvio del progetto.
+- Analisi dei requisiti funzionali.
+- Studio del contesto aziendale.
+- Definizione della struttura iniziale del software.
+- Creazione del primo script Python.
+- Introduzione del sistema di logging.
+- Predisposizione della funzione main().
+- Valutazione della libreria watchfiles.
 
-- Implementato controllo iniziale di coerenza del backup.
-- Rilevazione file mancanti nel backup.
-- Rilevazione backup non aggiornati.
-- Implementata pagina web locale.
-- Visualizzazione anomalie tramite report HTML.
-- Selezione multipla dei file.
-- Copia manuale dei file dal report.
-- Migliorata la validazione dei percorsi.
-- Introdotto server HTTP locale.
-- Utilizzo di thread dedicato per il server web.
-
-Stato:
-Sistema dotato di interfaccia web per verifica e riallineamento del backup.
+Risultato:
+Primo prototipo funzionante.
 
 ==================================================
-Versione 6.0 - 07/06/2026
+VERSIONE 1.1 - 21/05/2026
 ==================================================
+- Separazione tra cartella progetto e cartella monitorata.
+- Definizione della funzione monitora_cartella().
+- Introduzione delle docstring.
+- Predisposizione README e documentazione tecnica.
+- Revisione dell'architettura generale.
 
-- Implementato sistema di cache del report.
-- Eliminata la scansione completa del filesystem ad ogni refresh.
-- Aggiornamento periodico automatico del report.
-- Aggiunto pulsante "Ricalcola ora".
-- Aggiunto pulsante "Aggiorna pagina".
-- Limitazione del numero di righe visualizzate.
-- Inseriti dati statistici sul ricalcolo.
-- Migliorata la gestione concorrente tramite lock.
-
-Stato:
-Report web notevolmente più veloce su archivi di grandi dimensioni.
+Risultato:
+Architettura definita e pronta per l'espansione.
 
 ==================================================
-Versione 7.0 - 07/06/2026
+VERSIONE 1.2 - 22/05/2026
 ==================================================
+- Implementazione registrazione eventi.
+- Correzione problemi ambiente virtuale.
+- Test eventi di creazione, modifica ed eliminazione.
+- Miglioramento commenti e leggibilità del codice.
 
-- Implementato logo configurabile nella pagina web.
-- Aggiunto parametro path_logo_web nel file conf.conf.
-- Gestione percorsi relativi e assoluti del logo.
-- Endpoint HTTP dedicato alla distribuzione del logo.
-- Inserito logo nell'intestazione del report.
-- Visualizzazione versione software nella pagina web.
-- Confermata la storicizzazione dei file eliminati.
-- Migliorata la documentazione del progetto.
+Risultato:
+Monitoraggio eventi operativo.
 
-Stato:
-Sistema completo di monitoraggio, backup, controllo di coerenza e reportistica web configurabile.
+==================================================
+VERSIONE 1.3 - 26/05/2026
+==================================================
+- Introduzione pathlib.
+- Test foreground/background.
+- Predisposizione futura gestione backup.
+
+Risultato:
+Base tecnica consolidata.
+
+==================================================
+VERSIONE 2.0 - 28/05/2026
+==================================================
+- Introduzione file conf.conf.
+- Gestione dinamica dei percorsi.
+- Separazione configurazione e logica applicativa.
+- Eliminazione percorsi hardcoded.
+- Validazione configurazione.
+
+Risultato:
+Software completamente configurabile.
+
+==================================================
+VERSIONE 3.0 - 30/05/2026
+==================================================
+- Implementazione backup automatico.
+- Introduzione shutil.copy2().
+- Mantenimento struttura directory originale.
+- Creazione automatica cartelle mancanti.
+- Logging dettagliato dei backup.
+- Gestione errori di copia.
+
+Risultato:
+Backup automatico funzionante.
+
+==================================================
+VERSIONE 3.2 - 01/06/2026
+==================================================
+- Monitoraggio selettivo delle sottocartelle.
+- Introduzione parametro sottocartelle_da_monitorare.
+- Gestione wildcard *.
+- Migliorie documentazione.
+
+Risultato:
+Monitoraggio più efficiente.
+
+==================================================
+VERSIONE 4.0 - 04/06/2026
+==================================================
+- Introduzione report CSV.
+- Separazione log operativo/eventi file.
+- Registrazione eventi:
+  * added
+  * modified
+  * deleted
+- Registrazione dimensioni e data modifica.
+- Gestione eliminazioni.
+- Conservazione dei file eliminati nel backup.
+
+Risultato:
+Sistema di audit e tracciamento completo.
+
+==================================================
+VERSIONE 5.0 - 06/06/2026
+==================================================
+- Introduzione controllo iniziale backup.
+- Analisi file mancanti.
+- Analisi backup non aggiornati.
+- Introduzione report web locale.
+- Server HTTP integrato.
+- Visualizzazione anomalie.
+- Copia manuale selettiva da interfaccia web.
+- Protezioni sui percorsi.
+
+Risultato:
+Nascita della dashboard di gestione backup.
+
+==================================================
+VERSIONE 6.0 - 07/06/2026
+==================================================
+- Introduzione cache report.
+- Eliminazione scansione completa ad ogni refresh.
+- Aggiornamento periodico automatico.
+- Pulsante Ricalcola ora.
+- Pulsante Aggiorna pagina.
+- Limitazione numero righe visualizzate.
+- Statistiche di ricalcolo.
+
+Risultato:
+Forte incremento delle prestazioni.
+
+==================================================
+VERSIONE 7.0 - 07/06/2026
+==================================================
+- Introduzione logo configurabile.
+- Nuovo parametro path_logo_web.
+- Endpoint dedicato alla distribuzione del logo.
+- Visualizzazione versione software nella pagina.
+- Migliorie estetiche del report.
+
+Risultato:
+Interfaccia personalizzabile.
+
+==================================================
+VERSIONE 8.0 - 07/06/2026
+==================================================
+- Introduzione controllo inverso.
+- Analisi file presenti nel backup ma assenti nell'origine.
+- Pagina dedicata al ripristino.
+- Ripristino selettivo.
+- Conferma utente obbligatoria.
+- Registrazione CSV ripristini.
+- Registrazione log ripristini.
+- Protezione da sovrascrittura.
+- Nessuna cancellazione automatica.
+
+Risultato:
+Sistema di recupero documentale integrato.
+
+==================================================
+VERSIONE 8.1 - 07/06/2026
+==================================================
+- Apertura diretta cartella origine.
+- Apertura diretta cartella backup.
+- Accesso rapido tramite pulsanti web.
+- Tracciamento operazioni nel log.
+
+Risultato:
+Migliore operatività per l'utente.
+
+==================================================
+VERSIONE 8.2 - 07/06/2026
+==================================================
+- Apertura percorsi nella pagina di ripristino.
+- Pulsanti Apri backup.
+- Pulsanti Apri destinazione.
+- Gestione destinazioni non ancora esistenti.
+- Migliorie ergonomiche.
+
+Risultato:
+Navigazione completa da interfaccia web.
+
+==================================================
+VERSIONE 8.3 - 07/06/2026
+==================================================
+- Compatibilità multipiattaforma.
+- Windows -> os.startfile()
+- Linux -> xdg-open
+- macOS -> open
+- Uniformazione apertura percorsi.
+- Verifica compatibilità generale.
+
+Risultato:
+Software utilizzabile su Windows, Linux e macOS.
+
+==================================================
+STATO ATTUALE
+==================================================
+Funzioni operative:
+- Monitoraggio realtime.
+- Backup automatico.
+- Storicizzazione documentale.
+- CSV eventi.
+- Log operativo.
+- Dashboard web.
+- Cache prestazionale.
+- Logo configurabile.
+- Controllo coerenza backup.
+- Controllo inverso.
+- Ripristino selettivo.
+- Apertura percorsi.
+- Compatibilità multipiattaforma.

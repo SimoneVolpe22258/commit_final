@@ -1,5 +1,5 @@
 """
-Programma monitor.py per il monitoraggio della cartella C:\Tecnico.
+Programma monitor.py per il monitoraggio della cartella C:\Work\marconilab.
 
 Il log contiene informazioni di esecuzione del programma.
 Gli eventi sui file vengono salvati nel file CSV configurato in conf.conf.
@@ -8,15 +8,11 @@ Versione con:
 - controllo iniziale del backup;
 - pagina web locale http://127.0.0.1:5000 per visualizzare file mancanti/non aggiornati;
 - copia manuale nel backup dei file selezionati dalla pagina web;
-- logo configurabile nella pagina web;
-- controllo inverso manuale per ripristinare dall'archivio di backup i file mancanti nella cartella monitorata;
-- apertura rapida multipiattaforma da pagina web delle cartelle origine e backup;
-- pulsanti Apri backup e Apri destinazione anche nella pagina di controllo inverso/ripristino;
-- apertura percorsi compatibile con Windows, Linux e macOS.
+- logo configurabile nella pagina web.
 """
 
-__author__ = "Simone Volpe"
-__version__ = "Rev. 8.3 del 2026-06-07"
+__author__ = "Carloumberto Olivieri e Simone Volpe"
+__version__ = "Rev. 7.0 del 2026-06-07"
 
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -24,10 +20,7 @@ from urllib.parse import parse_qs, urlparse
 import csv
 import html
 import mimetypes
-import os
-import platform
 import shutil
-import subprocess
 import threading
 import time
 from watchfiles import watch
@@ -512,352 +505,6 @@ def copia_file_selezionati(id_file_selezionati, cartella_da_osservare, cartella_
     return risultati
 
 
-
-def trova_file_presenti_solo_in_backup(cartella_da_osservare, cartella_backup, sottocartelle):
-    """
-    Controllo inverso manuale: restituisce i file presenti nel backup ma non presenti
-    nella cartella monitorata. Non copia nulla: serve per la pagina di ripristino.
-    """
-    risultati = []
-
-    for percorso_backup in cartella_backup.rglob("*"):
-        try:
-            if not percorso_backup.is_file():
-                continue
-
-            percorso_relativo = percorso_backup.relative_to(cartella_backup)
-            percorso_origine = cartella_da_osservare / percorso_relativo
-
-            if not file_in_cartelle_monitorate(percorso_origine, cartella_da_osservare, sottocartelle):
-                continue
-
-            if percorso_origine.exists():
-                continue
-
-            stat_backup = percorso_backup.stat()
-            risultati.append({
-                "id": str(percorso_relativo).replace("\\", "/"),
-                "file": str(percorso_relativo),
-                "origine": percorso_origine,
-                "backup": percorso_backup,
-                "dimensione_backup": stat_backup.st_size,
-                "modifica_backup": formatta_data_modifica(stat_backup.st_mtime),
-                "stato": "PRESENTE SOLO IN BACKUP",
-            })
-
-        except Exception as errore:
-            risultati.append({
-                "id": str(percorso_backup),
-                "file": str(percorso_backup),
-                "origine": "N/D",
-                "backup": percorso_backup,
-                "dimensione_backup": "N/D",
-                "modifica_backup": "N/D",
-                "stato": f"ERRORE CONTROLLO INVERSO: {errore}",
-            })
-
-    risultati.sort(key=lambda elemento: (elemento["stato"], elemento["file"].lower()))
-    return risultati
-
-
-
-
-def apri_percorso_in_esplora(percorso, percorso_log):
-    """
-    Apre la cartella del percorso indicato con il file manager del sistema operativo.
-
-    Compatibilità:
-    - Windows: Esplora file, con selezione del file se il file esiste;
-    - Linux: xdg-open sulla cartella;
-    - macOS: open sulla cartella.
-
-    Se il file non esiste, apre la prima cartella padre disponibile senza creare nulla.
-    Funzione pensata per uso locale sul PC dove gira il programma.
-    """
-    try:
-        percorso = Path(percorso)
-        sistema = platform.system().lower()
-
-        if percorso.exists() and percorso.is_file():
-            cartella_da_aprire = percorso.parent
-            seleziona_file = True
-        elif percorso.exists() and percorso.is_dir():
-            cartella_da_aprire = percorso
-            seleziona_file = False
-        else:
-            # Caso tipico del controllo inverso: il file di destinazione non esiste ancora.
-            # Si prova ad aprire la cartella padre; se anche quella non esiste,
-            # si risale fino alla prima cartella esistente senza creare nulla.
-            cartella_da_aprire = percorso.parent
-            seleziona_file = False
-            while not cartella_da_aprire.exists() and cartella_da_aprire != cartella_da_aprire.parent:
-                cartella_da_aprire = cartella_da_aprire.parent
-
-        if not cartella_da_aprire.exists() or not cartella_da_aprire.is_dir():
-            scrivi_log(f"Apertura percorso non eseguita | percorso={percorso} | motivo=cartella inesistente", percorso_log, "AVVISO")
-            return False, "Cartella non trovata."
-
-        if sistema == "windows":
-            if seleziona_file:
-                subprocess.Popen(["explorer", "/select,", str(percorso)])
-            else:
-                os.startfile(str(cartella_da_aprire))
-
-        elif sistema == "darwin":
-            comando_open = shutil.which("open")
-            if not comando_open:
-                scrivi_log("Apertura percorso non eseguita | motivo=comando open non disponibile", percorso_log, "AVVISO")
-                return False, "Comando open non disponibile su questo sistema."
-            subprocess.Popen([comando_open, str(cartella_da_aprire)])
-
-        elif sistema == "linux":
-            comando_xdg_open = shutil.which("xdg-open")
-            if not comando_xdg_open:
-                scrivi_log("Apertura percorso non eseguita | motivo=comando xdg-open non disponibile", percorso_log, "AVVISO")
-                return False, "Comando xdg-open non disponibile. Installa xdg-utils oppure apri manualmente la cartella."
-            subprocess.Popen([comando_xdg_open, str(cartella_da_aprire)])
-
-        else:
-            scrivi_log(f"Apertura percorso non supportata | sistema={sistema} | percorso={percorso}", percorso_log, "AVVISO")
-            return False, f"Sistema operativo non supportato per apertura automatica: {sistema}"
-
-        scrivi_log(f"Apertura percorso richiesta da pagina web | sistema={sistema} | percorso={percorso} | cartella_aperta={cartella_da_aprire}", percorso_log)
-        return True, "Percorso aperto sul computer locale."
-
-    except Exception as errore:
-        scrivi_log(f"Apertura percorso fallita | percorso={percorso} | errore={errore}", percorso_log, "ERRORE")
-        return False, f"Errore apertura percorso: {errore}"
-
-
-def risolvi_percorso_apertura(tipo, id_file, cartella_da_osservare, cartella_backup, sottocartelle):
-    """
-    Converte una richiesta della pagina web in un percorso locale sicuro da aprire.
-    tipo può essere origine oppure backup.
-    """
-    id_file = id_file.replace("/", "\\") if "\\" in str(cartella_da_osservare) or "\\" in str(cartella_backup) else id_file
-
-    if tipo == "origine":
-        base = cartella_da_osservare.resolve()
-        percorso = (cartella_da_osservare / id_file).resolve()
-        try:
-            percorso.relative_to(base)
-        except ValueError:
-            return None, "Percorso origine non valido."
-        if not file_in_cartelle_monitorate(percorso, cartella_da_osservare, sottocartelle):
-            return None, "Percorso fuori dalle sottocartelle monitorate."
-        return percorso, ""
-
-    if tipo == "backup":
-        base = cartella_backup.resolve()
-        percorso = (cartella_backup / id_file).resolve()
-        try:
-            percorso.relative_to(base)
-        except ValueError:
-            return None, "Percorso backup non valido."
-        percorso_origine_equivalente = cartella_da_osservare / percorso.relative_to(base)
-        if not file_in_cartelle_monitorate(percorso_origine_equivalente, cartella_da_osservare, sottocartelle):
-            return None, "Percorso fuori dalle sottocartelle monitorate."
-        return percorso, ""
-
-    return None, "Tipo percorso non valido."
-
-def ripristina_file_da_backup(id_file_selezionati, cartella_da_osservare, cartella_backup, sottocartelle, percorso_log, percorso_csv):
-    """
-    Copia nella cartella monitorata solo i file selezionati che esistono nel backup
-    e non esistono più nella cartella monitorata. Non sovrascrive mai file esistenti.
-    """
-    risultati = []
-
-    for id_file in id_file_selezionati:
-        try:
-            id_file = id_file.replace("/", "\\") if "\\" in str(cartella_backup) else id_file
-            percorso_backup = (cartella_backup / id_file).resolve()
-            cartella_backup_base = cartella_backup.resolve()
-
-            try:
-                percorso_relativo = percorso_backup.relative_to(cartella_backup_base)
-            except ValueError:
-                risultati.append((id_file, "ERRORE - file fuori dalla cartella backup"))
-                continue
-
-            percorso_origine = (cartella_da_osservare / percorso_relativo).resolve()
-            cartella_origine_base = cartella_da_osservare.resolve()
-
-            try:
-                percorso_origine.relative_to(cartella_origine_base)
-            except ValueError:
-                risultati.append((id_file, "ERRORE - destinazione fuori dalla cartella monitorata"))
-                continue
-
-            if not percorso_backup.is_file():
-                risultati.append((id_file, "ERRORE - file backup non trovato"))
-                continue
-
-            if percorso_origine.exists():
-                risultati.append((id_file, "NON ESEGUITO - file già presente nella cartella monitorata"))
-                continue
-
-            if not file_in_cartelle_monitorate(percorso_origine, cartella_da_osservare, sottocartelle):
-                risultati.append((id_file, "ERRORE - destinazione fuori dalle sottocartelle monitorate"))
-                continue
-
-            percorso_origine.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(percorso_backup, percorso_origine)
-            scrivi_log(f"Ripristino da backup eseguito | backup={percorso_backup} | destinazione={percorso_origine}", percorso_log, "AVVISO")
-            scrivi_csv(percorso_csv, "ripristino_da_backup", percorso_origine, cartella_da_osservare, "OK - RIPRISTINATO DA BACKUP")
-            risultati.append((id_file, "OK"))
-
-        except Exception as errore:
-            scrivi_log(f"Errore ripristino da backup | file={id_file} | errore={errore}", percorso_log, "ERRORE")
-            risultati.append((id_file, f"ERRORE - {errore}"))
-
-    return risultati
-
-
-def genera_html_ripristino(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo=None, messaggio=""):
-    """
-    Genera la pagina del controllo inverso. La scansione viene eseguita solo quando
-    l'utente apre questa pagina o dopo un ripristino manuale.
-    """
-    inizio = time.time()
-    risultati = trova_file_presenti_solo_in_backup(cartella_da_osservare, cartella_backup, sottocartelle)
-    durata = round(time.time() - inizio, 2)
-    risultati_da_mostrare = risultati[:MAX_RIGHE_REPORT]
-    risultati_nascosti = max(0, len(risultati) - len(risultati_da_mostrare))
-    righe = []
-
-    for record in risultati_da_mostrare:
-        id_html = html.escape(record["id"], quote=True)
-        stato = html.escape(record["stato"])
-        file = html.escape(record["file"])
-        origine = html.escape(str(record["origine"]))
-        backup = html.escape(str(record["backup"]))
-        modifica_backup = html.escape(str(record["modifica_backup"]))
-        dimensione_backup = html.escape(str(record["dimensione_backup"]))
-
-        righe.append(f"""
-            <tr>
-                <td><input type="checkbox" name="file" value="{id_html}"></td>
-                <td><strong>{stato}</strong></td>
-                <td>{file}</td>
-                <td>{modifica_backup}</td>
-                <td>{dimensione_backup}</td>
-                <td class="percorso">{backup}</td>
-                <td class="percorso">{origine}</td>
-                <td>
-                    <a class="linkazione" href="/apri?tipo=backup&file={id_html}">Apri backup</a>
-                    <a class="linkazione" href="/apri?tipo=origine&file={id_html}">Apri destinazione</a>
-                </td>
-            </tr>
-        """)
-
-    if not righe:
-        corpo_tabella = """
-            <tr><td colspan="8" class="ok">Nessun file da ripristinare: non risultano file presenti solo nel backup.</td></tr>
-        """
-    else:
-        corpo_tabella = "\n".join(righe)
-
-    messaggi = []
-    if messaggio:
-        messaggi.append(html.escape(messaggio))
-    if risultati_nascosti:
-        messaggi.append(f"Sono mostrati i primi {MAX_RIGHE_REPORT} risultati; altri {risultati_nascosti} non sono visualizzati.")
-
-    messaggio_html = "".join(f"<div class='messaggio'>{m}</div>" for m in messaggi)
-    logo_html = '<img class="logo" src="/logo" alt="Logo">' if logo_disponibile(percorso_logo) else ''
-
-    return f"""<!doctype html>
-<html lang="it">
-<head>
-    <meta charset="utf-8">
-    <title>Ripristino da backup</title>
-    <style>
-        body {{ font-family: Arial, sans-serif; margin: 24px; background: #f5f5f5; color: #222; }}
-        h1 {{ margin: 0 0 4px 0; }}
-        .box {{ background: white; padding: 18px; border-radius: 10px; box-shadow: 0 1px 5px #ccc; }}
-        .testata {{ display: flex; align-items: flex-start; gap: 14px; margin-bottom: 12px; }}
-        .logo {{ width: 25mm; height: 25mm; object-fit: contain; flex: 0 0 auto; }}
-        .titolo {{ flex: 1; }}
-        .info {{ color: #555; margin-bottom: 16px; line-height: 1.45; }}
-        .messaggio {{ background: #e8f4ff; border: 1px solid #8cc8ff; padding: 10px; margin: 12px 0; border-radius: 6px; }}
-        .pericolo {{ background: #fff3cd; border: 1px solid #d39e00; padding: 12px; margin: 12px 0; border-radius: 6px; font-weight: bold; }}
-        table {{ width: 100%; border-collapse: collapse; font-size: 14px; }}
-        th, td {{ border-bottom: 1px solid #ddd; padding: 8px; vertical-align: top; }}
-        th {{ background: #eee; text-align: left; position: sticky; top: 0; }}
-        .percorso {{ font-size: 12px; color: #555; word-break: break-all; }}
-        .ok {{ text-align: center; padding: 20px; color: #197a28; font-weight: bold; }}
-        button {{ padding: 10px 14px; margin: 10px 8px 10px 0; cursor: pointer; border-radius: 6px; border: 1px solid #777; }}
-        .primario {{ background: #1f6feb; color: white; border-color: #1f6feb; }}
-        .pericoloso {{ background: #b42318; color: white; border-color: #b42318; }}
-        .linkazione {{ display: inline-block; padding: 6px 8px; margin: 2px; border: 1px solid #777; border-radius: 5px; text-decoration: none; color: #222; background: #f7f7f7; font-size: 12px; }}
-    </style>
-    <script>
-        function selezionaTuttiRipristino(valore) {{
-            document.querySelectorAll('input[name="file"]').forEach(c => c.checked = valore);
-        }}
-        function confermaRipristino() {{
-            const selezionati = document.querySelectorAll('input[name="file"]:checked').length;
-            if (selezionati === 0) {{
-                alert('Nessun file selezionato.');
-                return false;
-            }}
-            return confirm('ATTENZIONE: stai per copiare file dal BACKUP alla CARTELLA MONITORATA.\n\nL\\'operazione può essere pericolosa perché ripristina file che erano stati eliminati dall\\'origine.\n\nIl programma non sovrascrive file già presenti, ma è consigliato procedere solo se sei sicuro.\n\nVuoi continuare?');
-        }}
-    </script>
-</head>
-<body>
-    <div class="box">
-        <div class="testata">
-            {logo_html}
-            <div class="titolo">
-                <h1>Controllo inverso: ripristino da backup</h1>
-                <div>Versione programma: {html.escape(__version__)}</div>
-            </div>
-        </div>
-        <div class="info">
-            Pagina generata: {html.escape(timestamp())}<br>
-            Durata controllo inverso: {durata} secondi<br>
-            Cartella monitorata: {html.escape(str(cartella_da_osservare))}<br>
-            Cartella backup: {html.escape(str(cartella_backup))}<br>
-            File presenti solo nel backup: <strong>{len(risultati)}</strong>
-        </div>
-        <div class="pericolo">
-            Attenzione: questa pagina serve a ripristinare nella cartella monitorata file presenti nel backup ma assenti dall'origine.
-            Usarla solo manualmente e solo quando si vuole recuperare file eliminati.
-        </div>
-        {messaggio_html}
-        <form method="post" action="/ripristina" onsubmit="return confermaRipristino();">
-            <div>
-                <button type="button" onclick="selezionaTuttiRipristino(true)">Seleziona tutti visibili</button>
-                <button type="button" onclick="selezionaTuttiRipristino(false)">Deseleziona tutti</button>
-                <button class="pericoloso" type="submit">Ripristina selezionati nella cartella monitorata</button>
-                <button type="button" onclick="window.location='/'">Torna al report backup</button>
-                <button type="button" onclick="location.reload()">Ricalcola controllo inverso</button>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Stato</th>
-                        <th>File</th>
-                        <th>Modifica backup</th>
-                        <th>Dim. backup</th>
-                        <th>Backup</th>
-                        <th>Destinazione monitorata</th>
-                        <th>Azioni</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {corpo_tabella}
-                </tbody>
-            </table>
-        </form>
-    </div>
-</body>
-</html>"""
-
-
 def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo=None, messaggio=""):
     """
     Genera la pagina HTML usando la cache del report.
@@ -891,16 +538,12 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
                 <td>{dimensione_backup}</td>
                 <td class="percorso">{origine}</td>
                 <td class="percorso">{backup}</td>
-                <td>
-                    <a class="linkazione" href="/apri?tipo=origine&file={id_html}">Apri origine</a>
-                    <a class="linkazione" href="/apri?tipo=backup&file={id_html}">Apri backup</a>
-                </td>
             </tr>
         """)
 
     if not righe:
         corpo_tabella = """
-            <tr><td colspan="10" class="ok">Nessuna anomalia trovata: backup coerente.</td></tr>
+            <tr><td colspan="9" class="ok">Nessuna anomalia trovata: backup coerente.</td></tr>
         """
     else:
         corpo_tabella = "\n".join(righe)
@@ -947,7 +590,6 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
         button {{ padding: 10px 14px; margin: 10px 8px 10px 0; cursor: pointer; border-radius: 6px; border: 1px solid #777; }}
         .primario {{ background: #1f6feb; color: white; border-color: #1f6feb; }}
         .azioni {{ margin: 12px 0; }}
-        .linkazione {{ display: inline-block; padding: 6px 8px; margin: 2px; border: 1px solid #777; border-radius: 5px; text-decoration: none; color: #222; background: #f7f7f7; font-size: 12px; }}
     </style>
     <script>
         function selezionaTutti(valore) {{
@@ -981,7 +623,6 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
                 <button class="primario" type="submit">Copia selezionati nel backup</button>
                 <button type="button" onclick="location.reload()">Aggiorna pagina</button>
                 <button type="button" onclick="window.location='/ricalcola'">Ricalcola ora</button>
-                <button type="button" onclick="window.location='/ripristino'">Controllo inverso da backup</button>
             </div>
             <table>
                 <thead>
@@ -995,7 +636,6 @@ def genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, pe
                         <th>Dim. backup</th>
                         <th>Origine</th>
                         <th>Backup</th>
-                        <th>Azioni</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1062,39 +702,6 @@ def crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, p
                 self.end_headers()
                 return
 
-            if percorso_richiesto == "/apri":
-                parametri = parse_qs(urlparse(self.path).query)
-                tipo = parametri.get("tipo", [""])[0]
-                id_file = parametri.get("file", [""])[0]
-
-                if not id_file:
-                    messaggio = "Nessun file indicato per l'apertura del percorso."
-                else:
-                    percorso_da_aprire, errore_percorso = risolvi_percorso_apertura(
-                        tipo,
-                        id_file,
-                        cartella_da_osservare,
-                        cartella_backup,
-                        sottocartelle,
-                    )
-                    if percorso_da_aprire is None:
-                        messaggio = errore_percorso
-                    else:
-                        _, messaggio = apri_percorso_in_esplora(percorso_da_aprire, percorso_log)
-
-                provenienza = self.headers.get("Referer", "")
-                if "/ripristino" in provenienza:
-                    contenuto = genera_html_ripristino(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo, messaggio)
-                else:
-                    contenuto = genera_html_report(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo, messaggio)
-                self.invia_html(contenuto)
-                return
-
-            if percorso_richiesto == "/ripristino":
-                contenuto = genera_html_ripristino(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo)
-                self.invia_html(contenuto)
-                return
-
             if percorso_richiesto == "/ricalcola":
                 avviato = aggiorna_cache_report(
                     cartella_da_osservare,
@@ -1121,7 +728,7 @@ def crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, p
         def do_POST(self):
             percorso_richiesto = urlparse(self.path).path
 
-            if percorso_richiesto not in ("/copia", "/ripristina"):
+            if percorso_richiesto != "/copia":
                 self.send_error(404, "Pagina non trovata")
                 return
 
@@ -1129,33 +736,6 @@ def crea_handler_server(cartella_da_osservare, cartella_backup, sottocartelle, p
             corpo = self.rfile.read(lunghezza).decode("utf-8")
             dati = parse_qs(corpo)
             selezionati = dati.get("file", [])
-
-            if percorso_richiesto == "/ripristina":
-                if not selezionati:
-                    messaggio = "Nessun file selezionato per il ripristino."
-                else:
-                    risultati_ripristino = ripristina_file_da_backup(
-                        selezionati,
-                        cartella_da_osservare,
-                        cartella_backup,
-                        sottocartelle,
-                        percorso_log,
-                        percorso_csv,
-                    )
-                    ok = sum(1 for _, risultato in risultati_ripristino if risultato == "OK")
-                    errori = len(risultati_ripristino) - ok
-                    aggiorna_cache_report(
-                        cartella_da_osservare,
-                        cartella_backup,
-                        sottocartelle,
-                        percorso_log,
-                        origine="dopo_ripristino_da_backup",
-                    )
-                    messaggio = f"Ripristino completato: OK={ok}, non eseguiti/errori={errori}."
-
-                contenuto = genera_html_ripristino(cartella_da_osservare, cartella_backup, sottocartelle, percorso_logo, messaggio)
-                self.invia_html(contenuto)
-                return
 
             if not selezionati:
                 messaggio = "Nessun file selezionato."

@@ -1,118 +1,117 @@
+
 # Sistema di Backup e Monitoraggio
 
-## Descrizione del progetto
+## Descrizione
 
-Sistema sviluppato per monitorare cartelle aziendali, registrare gli eventi sui file e mantenere un backup aggiornato della documentazione.
+Sistema sviluppato da Carloumberto Olivieri e Simone Volpe per il monitoraggio di cartelle aziendali, la registrazione degli eventi sui file, il backup automatico e la conservazione storica dei documenti.
 
-La versione attuale integra:
+Il progetto è evoluto da semplice monitor di filesystem fino a piattaforma di controllo backup con interfaccia web locale, controllo di coerenza, ripristino selettivo e compatibilità multipiattaforma.
 
-- monitoraggio in tempo reale tramite watchfiles;
-- backup automatico dei file modificati;
-- controllo iniziale della coerenza del backup;
-- report CSV degli eventi;
-- pagina web locale per la verifica delle anomalie;
-- copia manuale dei file dal report web;
-- logo configurabile tramite file di configurazione;
-- sistema di cache per migliorare le prestazioni della pagina web.
+Versione attuale: REV. 8.3
 
-## Componenti del sistema
+---
 
-- monitor.py
-- conf.conf
-- monitor.log
-- file.csv
-- report web locale
-- sistema di backup automatico
-- controllo di coerenza del backup
-- cache del report HTML
-- logo personalizzabile
+## Evoluzione del progetto
 
-## Struttura del progetto
+### Rev. 1.x
+- Struttura iniziale del progetto
+- Introduzione di watchfiles
+- Logging di base
+- Separazione delle funzioni
 
-commit_final/
-├── data/
-├── log/
-├── src/
-│   ├── monitor.py
-│   ├── conf.conf
-│   └── logo.png
-├── CHANGELOG.txt
-└── README.md
+### Rev. 2.0
+- Introduzione del file conf.conf
+- Configurazione esterna dei percorsi
 
-## Configurazione
+### Rev. 3.x
+- Backup automatico
+- Utilizzo di pathlib
+- Gestione delle sottocartelle monitorate
 
-Esempio:
+### Rev. 4.0
+- Introduzione CSV eventi
+- Separazione log operativo / eventi file
+- Gestione eliminazioni
+- Conservazione file eliminati nel backup
 
-path_cartella_da_osservare="C:\Tecnico"
-path_cartella_backup="D:\BackupAutomatico\Tecnico"
-sottocartelle_da_monitorare="*"
-path_file_csv="../data/file.csv"
-path_logo_web="logo.png"
+### Rev. 5.0
+- Controllo iniziale backup
+- Report web locale
+- Verifica file mancanti e non aggiornati
+- Copia manuale da pagina web
 
-### path_logo_web
+### Rev. 6.0
+- Cache del report
+- Ottimizzazione prestazioni
+- Aggiornamento periodico
+- Pulsante ricalcolo manuale
 
-Permette di specificare il logo visualizzato nella pagina web.
+### Rev. 7.0
+- Logo configurabile
+- Visualizzazione versione software
+- Migliorie interfaccia web
 
-Se il percorso è relativo, il file viene cercato nella cartella src.
+### Rev. 8.0
+- Controllo inverso backup -> origine
+- Ripristino selettivo
+- Conferma operazione
+- Logging e CSV del ripristino
 
-## Controllo iniziale del backup
+### Rev. 8.1
+- Apertura percorsi origine e backup
 
-All'avvio il programma:
+### Rev. 8.2
+- Apertura percorsi anche nella pagina di ripristino
 
-1. esegue la scansione della cartella monitorata;
-2. verifica la presenza dei file nel backup;
-3. individua backup mancanti;
-4. individua backup non aggiornati;
-5. registra le anomalie;
-6. popola la cache utilizzata dal report web.
+### Rev. 8.3
+- Compatibilità Windows
+- Compatibilità Linux
+- Compatibilità macOS
+- Apertura cartelle multipiattaforma
 
-## Report Web
+---
 
-URL:
+## Funzionalità attuali
 
-http://127.0.0.1:5000
+- Monitoraggio realtime
+- Backup automatico
+- Backup mantenuto per storicizzazione
+- CSV eventi
+- Log operativo
+- Controllo iniziale backup
+- Report web
+- Cache prestazionale
+- Logo personalizzabile
+- Ripristino selettivo
+- Apertura percorsi
+- Compatibilità multipiattaforma
 
-Funzionalità:
+---
 
-- visualizzazione file mancanti;
-- visualizzazione backup non aggiornati;
-- selezione multipla dei file;
-- copia manuale nel backup;
-- aggiornamento pagina immediato;
-- ricalcolo manuale del report;
-- visualizzazione logo aziendale;
-- visualizzazione versione software;
-- utilizzo cache per migliorare le prestazioni.
+## Filosofia del sistema
 
-## Backup automatico
+Origine -> Backup
 
-I file creati o modificati vengono copiati automaticamente nella cartella di backup mantenendo la struttura originale delle directory.
+Il backup è la copia di sicurezza.
 
-In caso di eliminazione del file originale, la copia presente nel backup NON viene eliminata per consentire la storicizzazione.
+In caso di eliminazione di un file nell'origine:
+- il file NON viene cancellato dal backup;
+- l'evento viene registrato;
+- il file può essere recuperato tramite controllo inverso.
 
-## Librerie utilizzate
+Questo comportamento è intenzionale e costituisce il sistema di storicizzazione documentale.
 
-- watchfiles
-- pathlib
-- shutil
-- threading
-- http.server
-- csv
-- html
-- mimetypes
+---
 
-## Stato attuale
+## Compatibilità
 
-Versione software: 7.0
-Ultimo aggiornamento: 07/06/2026
+- Windows
+- Linux
+- macOS
 
-Funzionalità operative:
+---
 
-- monitoraggio file;
-- backup automatico;
-- report CSV;
-- controllo iniziale backup;
-- report web locale;
-- cache del report;
-- logo configurabile;
-- storicizzazione dei file eliminati.
+## Autori
+
+- Carloumberto Olivieri
+- Simone Volpe

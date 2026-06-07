@@ -59,3 +59,13 @@ data_ora;evento;file;dimensione;ultima_modifica;backup
 2026-06-07 11:33:11;copia_da_pagina_web;pippo3.txt;C:\TECNICO\pippo3.txt;0;2026-06-07 11:21:33;OK
 2026-06-07 11:43:10;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
 2026-06-07 11:43:10;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP
+2026-06-07 13:00:51;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 13:00:51;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP
+2026-06-07 13:02:44;ripristino_da_backup;Nuovo documento di testo.txt;C:\TECNICO\Nuovo documento di testo.txt;0;2026-06-07 11:21:33;OK - RIPRISTINATO DA BACKUP
+2026-06-07 13:02:44;added;Nuovo documento di testo.txt;C:\Tecnico\Nuovo documento di testo.txt;0;2026-06-07 11:21:33;OK
+2026-06-07 13:15:15;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 13:15:15;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP
+2026-06-07 13:21:08;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 13:21:08;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP
+2026-06-07 13:31:16;controllo_iniziale;pippo.txt;C:\Tecnico\pippo.txt;0;2026-06-07 10:51:37;MANCANTE IN BACKUP
+2026-06-07 13:31:16;controllo_iniziale;pippo2.txt;C:\Tecnico\pippo2.txt;0;2026-06-07 11:17:00;MANCANTE IN BACKUP

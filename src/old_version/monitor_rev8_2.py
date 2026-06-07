@@ -10,13 +10,12 @@ Versione con:
 - copia manuale nel backup dei file selezionati dalla pagina web;
 - logo configurabile nella pagina web;
 - controllo inverso manuale per ripristinare dall'archivio di backup i file mancanti nella cartella monitorata;
-- apertura rapida multipiattaforma da pagina web delle cartelle origine e backup;
-- pulsanti Apri backup e Apri destinazione anche nella pagina di controllo inverso/ripristino;
-- apertura percorsi compatibile con Windows, Linux e macOS.
+- apertura rapida da pagina web delle cartelle origine e backup in Esplora file;
+- pulsanti Apri backup e Apri destinazione anche nella pagina di controllo inverso/ripristino.
 """
 
 __author__ = "Simone Volpe"
-__version__ = "Rev. 8.3 del 2026-06-07"
+__version__ = "Rev. 8.2 del 2026-06-07"
 
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -564,14 +563,9 @@ def trova_file_presenti_solo_in_backup(cartella_da_osservare, cartella_backup, s
 
 def apri_percorso_in_esplora(percorso, percorso_log):
     """
-    Apre la cartella del percorso indicato con il file manager del sistema operativo.
-
-    Compatibilità:
-    - Windows: Esplora file, con selezione del file se il file esiste;
-    - Linux: xdg-open sulla cartella;
-    - macOS: open sulla cartella.
-
-    Se il file non esiste, apre la prima cartella padre disponibile senza creare nulla.
+    Apre Esplora file sulla cartella del percorso indicato.
+    Se il percorso è un file esistente prova a selezionarlo.
+    Se il file non esiste apre la cartella padre, se disponibile.
     Funzione pensata per uso locale sul PC dove gira il programma.
     """
     try:
@@ -602,26 +596,12 @@ def apri_percorso_in_esplora(percorso, percorso_log):
                 subprocess.Popen(["explorer", "/select,", str(percorso)])
             else:
                 os.startfile(str(cartella_da_aprire))
-
         elif sistema == "darwin":
-            comando_open = shutil.which("open")
-            if not comando_open:
-                scrivi_log("Apertura percorso non eseguita | motivo=comando open non disponibile", percorso_log, "AVVISO")
-                return False, "Comando open non disponibile su questo sistema."
-            subprocess.Popen([comando_open, str(cartella_da_aprire)])
-
-        elif sistema == "linux":
-            comando_xdg_open = shutil.which("xdg-open")
-            if not comando_xdg_open:
-                scrivi_log("Apertura percorso non eseguita | motivo=comando xdg-open non disponibile", percorso_log, "AVVISO")
-                return False, "Comando xdg-open non disponibile. Installa xdg-utils oppure apri manualmente la cartella."
-            subprocess.Popen([comando_xdg_open, str(cartella_da_aprire)])
-
+            subprocess.Popen(["open", str(cartella_da_aprire)])
         else:
-            scrivi_log(f"Apertura percorso non supportata | sistema={sistema} | percorso={percorso}", percorso_log, "AVVISO")
-            return False, f"Sistema operativo non supportato per apertura automatica: {sistema}"
+            subprocess.Popen(["xdg-open", str(cartella_da_aprire)])
 
-        scrivi_log(f"Apertura percorso richiesta da pagina web | sistema={sistema} | percorso={percorso} | cartella_aperta={cartella_da_aprire}", percorso_log)
+        scrivi_log(f"Apertura percorso richiesta da pagina web | percorso={percorso}", percorso_log)
         return True, "Percorso aperto sul computer locale."
 
     except Exception as errore:
