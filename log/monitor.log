@@ -462,3 +462,563 @@
 [2026-06-07 14:22:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=38.5
 [2026-06-07 14:23:47] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=3 | durata_secondi=39.38
 [2026-06-07 14:24:25] [INFO] Programma terminato dall'utente
+[2026-06-08 07:28:08] [INFO] Programma avviato
+[2026-06-08 07:28:08] [INFO] CSV eventi | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\..\data\file.csv
+[2026-06-08 07:28:08] [INFO] Cartella backup | percorso=d:\BakupAutomaticoConPythonMonitor\Tecnico
+[2026-06-08 07:28:08] [INFO] Logo pagina web | percorso=C:\scripts\volpe_simone_commit_final\commit_final\src\logo.png
+[2026-06-08 07:28:08] [INFO] Controllo iniziale backup avviato
+[2026-06-08 07:29:15] [AVVISO] Backup mancante | origine=C:\Tecnico\COMPRI_GIANLUCA\File presente in cartella origine.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\COMPRI_GIANLUCA\File presente in cartella origine.txt
+[2026-06-08 07:29:15] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo.txt
+[2026-06-08 07:29:15] [AVVISO] Backup mancante | origine=C:\Tecnico\pippo2.txt | atteso=d:\BakupAutomaticoConPythonMonitor\Tecnico\pippo2.txt
+[2026-06-08 07:29:15] [INFO] Controllo iniziale backup completato | mancanti=3 | non_aggiornati=0 | errori=0 | durata_secondi=66.71
+[2026-06-08 07:29:15] [INFO] Aggiornamento periodico report attivo | intervallo_secondi=60
+[2026-06-08 07:29:15] [INFO] Pagina report backup attiva | url=http://127.0.0.1:5000
+[2026-06-08 07:29:15] [INFO] Monitoraggio avviato | cartella=C:\Tecnico
+[2026-06-08 07:29:15] [INFO] Sottocartelle monitorate | *
+[2026-06-08 07:30:04] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=C:\TECNICO\COMPRI_GIANLUCA\File presente in cartella origine.txt | cartella_aperta=C:\TECNICO\COMPRI_GIANLUCA
+[2026-06-08 07:30:09] [AVVISO] File eliminato | file=C:\Tecnico\COMPRI_GIANLUCA\File presente in cartella origine.txt
+[2026-06-08 07:30:09] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\COMPRI_GIANLUCA
+[2026-06-08 07:30:14] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=C:\TECNICO\pippo.txt | cartella_aperta=C:\TECNICO
+[2026-06-08 07:30:18] [AVVISO] File eliminato | file=C:\Tecnico\pippo.txt
+[2026-06-08 07:30:23] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=C:\TECNICO\pippo2.txt | cartella_aperta=C:\TECNICO
+[2026-06-08 07:30:27] [AVVISO] File eliminato | file=C:\Tecnico\pippo2.txt
+[2026-06-08 07:30:40] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=C:\TECNICO\pippo2.txt | cartella_aperta=C:\TECNICO
+[2026-06-08 07:30:43] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=C:\TECNICO\pippo2.txt | cartella_aperta=C:\TECNICO
+[2026-06-08 07:30:56] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=2 | durata_secondi=40.81
+[2026-06-08 07:32:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.54
+[2026-06-08 07:34:15] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.6
+[2026-06-08 07:35:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.67
+[2026-06-08 07:37:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.56
+[2026-06-08 07:39:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.21
+[2026-06-08 07:39:46] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=D:\BakupAutomaticoConPythonMonitor\Tecnico\CASTELLANI\File presente solo in cartella backup.txt | cartella_aperta=D:\BakupAutomaticoConPythonMonitor\Tecnico\CASTELLANI
+[2026-06-08 07:40:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.82
+[2026-06-08 07:42:37] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.81
+[2026-06-08 07:44:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.87
+[2026-06-08 07:45:56] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.78
+[2026-06-08 07:47:36] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.01
+[2026-06-08 07:49:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.12
+[2026-06-08 07:50:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.44
+[2026-06-08 07:52:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.2
+[2026-06-08 07:54:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.23
+[2026-06-08 07:55:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.05
+[2026-06-08 07:57:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.01
+[2026-06-08 07:59:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.88
+[2026-06-08 08:00:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=39.78
+[2026-06-08 08:02:39] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.09
+[2026-06-08 08:04:22] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.26
+[2026-06-08 08:06:05] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.4
+[2026-06-08 08:07:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.1
+[2026-06-08 08:09:31] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.12
+[2026-06-08 08:11:12] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.98
+[2026-06-08 08:12:53] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.12
+[2026-06-08 08:14:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.49
+[2026-06-08 08:16:20] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=45.16
+[2026-06-08 08:18:10] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=49.9
+[2026-06-08 08:19:53] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.25
+[2026-06-08 08:21:36] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.59
+[2026-06-08 08:23:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.52
+[2026-06-08 08:25:00] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.5
+[2026-06-08 08:26:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.71
+[2026-06-08 08:28:21] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.1
+[2026-06-08 08:30:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.08
+[2026-06-08 08:31:45] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.02
+[2026-06-08 08:33:26] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.26
+[2026-06-08 08:35:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.38
+[2026-06-08 08:36:49] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.19
+[2026-06-08 08:38:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=45.21
+[2026-06-08 08:40:19] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=44.34
+[2026-06-08 08:42:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.59
+[2026-06-08 08:43:43] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.39
+[2026-06-08 08:45:24] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.32
+[2026-06-08 08:47:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.7
+[2026-06-08 08:48:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.51
+[2026-06-08 08:50:31] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.13
+[2026-06-08 08:52:13] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.02
+[2026-06-08 08:53:56] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.12
+[2026-06-08 08:55:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.59
+[2026-06-08 08:57:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=44.72
+[2026-06-08 08:59:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=44.11
+[2026-06-08 09:00:50] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.6
+[2026-06-08 09:02:33] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.38
+[2026-06-08 09:04:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.22
+[2026-06-08 09:05:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.82
+[2026-06-08 09:07:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.76
+[2026-06-08 09:09:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.44
+[2026-06-08 09:11:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.34
+[2026-06-08 09:11:09] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.dxf
+[2026-06-08 09:11:09] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.pdf
+[2026-06-08 09:11:09] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.dxf
+[2026-06-08 09:11:09] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.dxf
+[2026-06-08 09:11:09] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.dxf
+[2026-06-08 09:11:09] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.pdf
+[2026-06-08 09:11:09] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.pdf
+[2026-06-08 09:11:09] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.pdf
+[2026-06-08 09:11:09] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.dxf
+[2026-06-08 09:11:09] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.dxf
+[2026-06-08 09:11:09] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.pdf
+[2026-06-08 09:11:09] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.pdf
+[2026-06-08 09:11:38] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:11:38] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.pdf
+[2026-06-08 09:11:38] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.pdf
+[2026-06-08 09:11:38] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.pdf
+[2026-06-08 09:11:45] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:11:45] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.pdf
+[2026-06-08 09:11:45] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.pdf
+[2026-06-08 09:11:45] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.pdf
+[2026-06-08 09:11:49] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:11:49] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.pdf
+[2026-06-08 09:11:49] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.pdf
+[2026-06-08 09:11:49] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.pdf
+[2026-06-08 09:11:55] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:11:55] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.pdf
+[2026-06-08 09:11:55] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.pdf
+[2026-06-08 09:11:55] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.pdf
+[2026-06-08 09:12:10] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:12:10] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.dxf
+[2026-06-08 09:12:10] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.dxf
+[2026-06-08 09:12:10] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99288 00.dxf
+[2026-06-08 09:12:14] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:12:14] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BT-VPAR99289 00.dxf
+[2026-06-08 09:12:14] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.dxf
+[2026-06-08 09:12:14] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.dxf
+[2026-06-08 09:12:18] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:12:18] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 00.dxf
+[2026-06-08 09:12:18] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.dxf
+[2026-06-08 09:12:18] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.dxf
+[2026-06-08 09:12:22] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:12:22] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.dxf
+[2026-06-08 09:12:22] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.dxf
+[2026-06-08 09:12:22] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.dxf
+[2026-06-08 09:12:49] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.66
+[2026-06-08 09:13:58] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:13:58] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.lsr
+[2026-06-08 09:13:58] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.lsr
+[2026-06-08 09:14:04] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 09:14:04] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 09:14:05] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:14:33] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.25
+[2026-06-08 09:14:40] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:14:40] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.lsr
+[2026-06-08 09:14:40] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.lsr
+[2026-06-08 09:14:46] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.dxf
+[2026-06-08 09:14:46] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.dxf
+[2026-06-08 09:14:47] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:14:48] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 09:14:48] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 09:14:48] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 09:14:49] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:15:33] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:15:33] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.ecad
+[2026-06-08 09:15:33] [INFO] Evento ignorato: non è un file | evento=added | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.ecad
+[2026-06-08 09:15:33] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:15:33] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.ecad
+[2026-06-08 09:15:33] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.ecad
+[2026-06-08 09:15:46] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:15:46] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.ecad
+[2026-06-08 09:15:46] [INFO] Evento ignorato: non è un file | evento=added | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.ecad
+[2026-06-08 09:15:47] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:15:47] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.ecad
+[2026-06-08 09:15:47] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.ecad
+[2026-06-08 09:16:12] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.lsr
+[2026-06-08 09:16:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.lsr
+[2026-06-08 09:16:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.46
+[2026-06-08 09:17:09] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.lsr
+[2026-06-08 09:17:09] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.lsr
+[2026-06-08 09:17:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.16
+[2026-06-08 09:18:11] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:18:11] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.ecad
+[2026-06-08 09:18:11] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.ecad
+[2026-06-08 09:18:11] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.dxf
+[2026-06-08 09:18:11] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.dxf
+[2026-06-08 09:18:11] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf
+[2026-06-08 09:18:11] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf
+[2026-06-08 09:18:11] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.dxf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.dxf
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.lsr
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.lsr
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.lsr
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.lsr
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.dxf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.dxf
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.ecad
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.ecad
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.dxf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.dxf
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.pdf
+[2026-06-08 09:18:12] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf
+[2026-06-08 09:18:12] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf
+[2026-06-08 09:18:21] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:18:21] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.dxf
+[2026-06-08 09:18:21] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.dxf
+[2026-06-08 09:18:21] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf
+[2026-06-08 09:18:34] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:18:34] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.dxf
+[2026-06-08 09:18:34] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.dxf
+[2026-06-08 09:18:34] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.dxf
+[2026-06-08 09:18:47] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:18:47] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.dxf
+[2026-06-08 09:18:47] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.dxf
+[2026-06-08 09:18:47] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.dxf
+[2026-06-08 09:19:01] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:19:01] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X_SV4.dxf
+[2026-06-08 09:19:01] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X_SV4.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X_SV4.dxf
+[2026-06-08 09:19:01] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.dxf
+[2026-06-08 09:19:23] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:19:23] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.ecad
+[2026-06-08 09:19:23] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.ecad
+[2026-06-08 09:19:23] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.ecad
+[2026-06-08 09:19:37] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:19:37] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.ecad
+[2026-06-08 09:19:37] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.ecad
+[2026-06-08 09:19:37] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.ecad
+[2026-06-08 09:19:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.37
+[2026-06-08 09:19:47] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:19:47] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.lsr
+[2026-06-08 09:19:47] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.lsr
+[2026-06-08 09:19:47] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10 - Copia.lsr
+[2026-06-08 09:19:57] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:19:57] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4 - Copia.lsr
+[2026-06-08 09:19:57] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4X.lsr
+[2026-06-08 09:19:57] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4X.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4X.lsr
+[2026-06-08 09:20:02] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:20:02] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.pdf
+[2026-06-08 09:20:02] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.pdf
+[2026-06-08 09:20:02] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.pdf
+[2026-06-08 09:20:09] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 09:20:09] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.pdf
+[2026-06-08 09:20:09] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.pdf
+[2026-06-08 09:20:09] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 - Copia.pdf
+[2026-06-08 09:21:24] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.44
+[2026-06-08 09:23:09] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=44.52
+[2026-06-08 09:24:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.86
+[2026-06-08 09:26:34] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.62
+[2026-06-08 09:28:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.15
+[2026-06-08 09:30:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.37
+[2026-06-08 09:31:43] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.76
+[2026-06-08 09:32:33] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:32:33] [INFO] Evento ignorato: non è un file | evento=added | percorso=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:32:33] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI
+[2026-06-08 09:32:33] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:32:33] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:32:34] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:32:34] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:32:35] [INFO] Evento rilevato | evento=modified | file=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:32:35] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\OFFERTE_CONSUNTIVI\OFF_08_06_2026.pdf
+[2026-06-08 09:33:26] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.5
+[2026-06-08 09:35:09] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.2
+[2026-06-08 09:36:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.7
+[2026-06-08 09:38:32] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.68
+[2026-06-08 09:40:14] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.72
+[2026-06-08 09:41:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.36
+[2026-06-08 09:43:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.54
+[2026-06-08 09:45:20] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.47
+[2026-06-08 09:47:02] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.98
+[2026-06-08 09:48:44] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.73
+[2026-06-08 09:50:28] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.66
+[2026-06-08 09:52:12] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.62
+[2026-06-08 09:53:55] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.49
+[2026-06-08 09:55:37] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.41
+[2026-06-08 09:57:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=45.45
+[2026-06-08 09:59:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.76
+[2026-06-08 10:00:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.43
+[2026-06-08 10:02:31] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.84
+[2026-06-08 10:04:14] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.68
+[2026-06-08 10:05:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.22
+[2026-06-08 10:07:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.75
+[2026-06-08 10:09:22] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.45
+[2026-06-08 10:11:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=45.09
+[2026-06-08 10:12:50] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.83
+[2026-06-08 10:14:32] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.38
+[2026-06-08 10:16:15] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.26
+[2026-06-08 10:17:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.68
+[2026-06-08 10:19:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.39
+[2026-06-08 10:21:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.57
+[2026-06-08 10:23:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.54
+[2026-06-08 10:24:49] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.8
+[2026-06-08 10:26:31] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.42
+[2026-06-08 10:28:15] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.55
+[2026-06-08 10:29:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=43.4
+[2026-06-08 10:31:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.21
+[2026-06-08 10:33:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.73
+[2026-06-08 10:35:05] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.56
+[2026-06-08 10:36:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.49
+[2026-06-08 10:38:31] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.93
+[2026-06-08 10:40:14] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.66
+[2026-06-08 10:41:56] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.57
+[2026-06-08 10:43:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.25
+[2026-06-08 10:45:21] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.73
+[2026-06-08 10:47:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=44.77
+[2026-06-08 10:48:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.59
+[2026-06-08 10:50:33] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=44.93
+[2026-06-08 10:52:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=42.66
+[2026-06-08 10:54:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=47.44
+[2026-06-08 10:55:44] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=40.8
+[2026-06-08 10:55:52] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=D:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288 - Copia.dxf | cartella_aperta=D:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 10:57:15] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=D:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289 00.pdf | cartella_aperta=D:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 10:57:26] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=41.59
+[2026-06-08 10:59:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=41.12
+[2026-06-08 11:00:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=40.85
+[2026-06-08 11:02:31] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.81
+[2026-06-08 11:04:13] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.35
+[2026-06-08 11:05:56] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.17
+[2026-06-08 11:07:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.05
+[2026-06-08 11:09:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.14
+[2026-06-08 11:11:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.08
+[2026-06-08 11:12:49] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.89
+[2026-06-08 11:14:33] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.49
+[2026-06-08 11:16:15] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.51
+[2026-06-08 11:17:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.47
+[2026-06-08 11:19:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.05
+[2026-06-08 11:21:22] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.0
+[2026-06-08 11:23:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.52
+[2026-06-08 11:24:47] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.19
+[2026-06-08 11:26:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.37
+[2026-06-08 11:28:12] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.84
+[2026-06-08 11:29:58] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.75
+[2026-06-08 11:31:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.96
+[2026-06-08 11:33:24] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.3
+[2026-06-08 11:35:09] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.97
+[2026-06-08 11:36:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.7
+[2026-06-08 11:38:36] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.75
+[2026-06-08 11:40:19] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.04
+[2026-06-08 11:42:03] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.29
+[2026-06-08 11:43:45] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.71
+[2026-06-08 11:45:28] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.64
+[2026-06-08 11:47:11] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.34
+[2026-06-08 11:48:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.77
+[2026-06-08 11:50:39] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.97
+[2026-06-08 11:52:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.76
+[2026-06-08 11:54:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.56
+[2026-06-08 11:55:52] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.66
+[2026-06-08 11:57:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.7
+[2026-06-08 11:59:22] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.04
+[2026-06-08 12:01:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.28
+[2026-06-08 12:02:50] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.86
+[2026-06-08 12:04:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.13
+[2026-06-08 12:06:20] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.61
+[2026-06-08 12:08:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.24
+[2026-06-08 12:09:48] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.34
+[2026-06-08 12:11:33] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.86
+[2026-06-08 12:13:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=43.4
+[2026-06-08 12:14:59] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=42.3
+[2026-06-08 12:16:45] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=46.12
+[2026-06-08 12:18:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=52.69
+[2026-06-08 12:20:28] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=50.72
+[2026-06-08 12:22:25] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=56.62
+[2026-06-08 12:24:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=52.0
+[2026-06-08 12:26:08] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=51.54
+[2026-06-08 12:28:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=52.66
+[2026-06-08 12:29:55] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=53.85
+[2026-06-08 12:31:49] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=53.77
+[2026-06-08 12:33:43] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=54.61
+[2026-06-08 12:35:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=51.75
+[2026-06-08 12:37:25] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=50.22
+[2026-06-08 12:39:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=50.21
+[2026-06-08 12:41:09] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=53.52
+[2026-06-08 12:43:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=51.89
+[2026-06-08 12:44:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=56.13
+[2026-06-08 12:46:43] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.66
+[2026-06-08 12:48:28] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.69
+[2026-06-08 12:50:13] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=44.93
+[2026-06-08 12:51:59] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.61
+[2026-06-08 12:53:44] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.49
+[2026-06-08 12:55:30] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.17
+[2026-06-08 12:57:15] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.3
+[2026-06-08 12:59:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=45.66
+[2026-06-08 13:00:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=49.91
+[2026-06-08 13:02:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=49.19
+[2026-06-08 13:04:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=49.56
+[2026-06-08 13:06:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=49.02
+[2026-06-08 13:08:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.82
+[2026-06-08 13:09:56] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=49.26
+[2026-06-08 13:11:45] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.67
+[2026-06-08 13:13:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=49.63
+[2026-06-08 13:15:25] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=49.99
+[2026-06-08 13:17:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=50.86
+[2026-06-08 13:19:07] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=50.99
+[2026-06-08 13:20:57] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=50.94
+[2026-06-08 13:22:46] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.94
+[2026-06-08 13:24:35] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.59
+[2026-06-08 13:26:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.4
+[2026-06-08 13:28:12] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.89
+[2026-06-08 13:30:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.69
+[2026-06-08 13:31:49] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=20 | durata_secondi=48.47
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4X.lsr
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4X.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4X.lsr
+[2026-06-08 13:32:26] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.ecad
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.lsr
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X_SV10.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X_SV10.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X_SV10.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.ecad
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.ecad
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288_SV10.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.pdf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X_SV10.lsr
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X_SV10.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X_SV10.lsr
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288_SV10.lsr
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288_SV10.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288_SV10.lsr
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.dxf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.dxf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.lsr
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X_SV10.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.pdf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.pdf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4.lsr
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4.lsr
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4.lsr | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4.lsr
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289_SV4.dxf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.pdf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.ecad
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.ecad
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289_SV4X.lsr
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.ecad
+[2026-06-08 13:32:26] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X_SV4.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.ecad
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.ecad
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.ecad
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.ecad | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.ecad
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.pdf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288X.pdf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.ecad
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99289X.dxf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288_SV10.dxf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.ecad
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288X.pdf
+[2026-06-08 13:32:26] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO\BOT_BT-VPAR99288.pdf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.pdf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.pdf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.pdf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.pdf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X.pdf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X_SV4.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X_SV4.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99289X_SV4.dxf
+[2026-06-08 13:32:26] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.dxf
+[2026-06-08 13:32:26] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.dxf | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\BOT_BT-VPAR99288.dxf
+[2026-06-08 13:32:26] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\SVILUPPO
+[2026-06-08 13:33:21] [INFO] Cache report aggiornata | origine=ricalcolo_manuale | file_non_coerenti=0 | durata_secondi=49.58
+[2026-06-08 13:34:24] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\Nuovo documento di testo.txt
+[2026-06-08 13:34:24] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\Nuovo documento di testo.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\Nuovo documento di testo.txt
+[2026-06-08 13:34:24] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO
+[2026-06-08 13:34:34] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\Nuovo documento di testo.txt
+[2026-06-08 13:34:34] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO
+[2026-06-08 13:34:34] [INFO] Evento rilevato | evento=added | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\patata.txt
+[2026-06-08 13:34:34] [INFO] Backup aggiornato | origine=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\patata.txt | destinazione=d:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\patata.txt
+[2026-06-08 13:34:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=51.5
+[2026-06-08 13:36:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.37
+[2026-06-08 13:38:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.14
+[2026-06-08 13:40:05] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.63
+[2026-06-08 13:41:53] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.75
+[2026-06-08 13:43:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.5
+[2026-06-08 13:45:28] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.58
+[2026-06-08 13:47:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.69
+[2026-06-08 13:49:03] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.72
+[2026-06-08 13:50:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.27
+[2026-06-08 13:52:42] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=51.45
+[2026-06-08 13:54:30] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.53
+[2026-06-08 13:56:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.52
+[2026-06-08 13:58:05] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.69
+[2026-06-08 13:59:53] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.72
+[2026-06-08 14:01:40] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.44
+[2026-06-08 14:03:28] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.57
+[2026-06-08 14:05:15] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.51
+[2026-06-08 14:07:03] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.59
+[2026-06-08 14:08:50] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.57
+[2026-06-08 14:10:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.02
+[2026-06-08 14:12:26] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.8
+[2026-06-08 14:14:14] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.61
+[2026-06-08 14:16:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.81
+[2026-06-08 14:17:50] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.1
+[2026-06-08 14:19:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.97
+[2026-06-08 14:21:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=51.02
+[2026-06-08 14:23:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.7
+[2026-06-08 14:25:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.3
+[2026-06-08 14:26:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.24
+[2026-06-08 14:28:42] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.36
+[2026-06-08 14:30:30] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.94
+[2026-06-08 14:32:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.9
+[2026-06-08 14:34:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.83
+[2026-06-08 14:35:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.73
+[2026-06-08 14:37:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.52
+[2026-06-08 14:39:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.59
+[2026-06-08 14:41:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.57
+[2026-06-08 14:43:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.68
+[2026-06-08 14:44:52] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.86
+[2026-06-08 14:46:43] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=50.74
+[2026-06-08 14:48:30] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.73
+[2026-06-08 14:50:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.59
+[2026-06-08 14:52:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.15
+[2026-06-08 14:53:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.86
+[2026-06-08 14:55:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.39
+[2026-06-08 14:57:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.33
+[2026-06-08 14:59:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.61
+[2026-06-08 15:01:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.71
+[2026-06-08 15:02:55] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=51.45
+[2026-06-08 15:04:43] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.98
+[2026-06-08 15:06:31] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.56
+[2026-06-08 15:08:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.3
+[2026-06-08 15:10:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.97
+[2026-06-08 15:11:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.64
+[2026-06-08 15:13:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.57
+[2026-06-08 15:15:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.49
+[2026-06-08 15:17:17] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.7
+[2026-06-08 15:19:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.23
+[2026-06-08 15:20:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.15
+[2026-06-08 15:22:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.27
+[2026-06-08 15:24:25] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.24
+[2026-06-08 15:26:16] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=50.19
+[2026-06-08 15:28:03] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.44
+[2026-06-08 15:29:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.45
+[2026-06-08 15:31:38] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.39
+[2026-06-08 15:33:25] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.38
+[2026-06-08 15:35:13] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.7
+[2026-06-08 15:37:01] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.54
+[2026-06-08 15:38:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=50.18
+[2026-06-08 15:40:39] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.78
+[2026-06-08 15:42:27] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=48.13
+[2026-06-08 15:44:14] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.55
+[2026-06-08 15:46:02] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.65
+[2026-06-08 15:47:49] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=47.54
+[2026-06-08 15:49:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=1 | durata_secondi=51.45
+[2026-06-08 15:51:15] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=C:\TECNICO\BOSCO_TECNOLOGY\DISEGNIBOSCO\patata.txt | cartella_aperta=C:\TECNICO\BOSCO_TECNOLOGY\DISEGNIBOSCO
+[2026-06-08 15:51:21] [AVVISO] File eliminato | file=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\patata.txt
+[2026-06-08 15:51:21] [INFO] Evento ignorato: non è un file | evento=modified | percorso=C:\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO
+[2026-06-08 15:51:36] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=54.98
+[2026-06-08 15:53:23] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=47.62
+[2026-06-08 15:55:11] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=47.39
+[2026-06-08 15:56:59] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=48.47
+[2026-06-08 15:58:40] [INFO] Apertura percorso richiesta da pagina web | sistema=windows | percorso=D:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO\Nuovo documento di testo.txt | cartella_aperta=D:\BakupAutomaticoConPythonMonitor\Tecnico\BOSCO_TECNOLOGY\DISEGNIBOSCO
+[2026-06-08 15:58:51] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=52.04
+[2026-06-08 16:00:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=49.78
+[2026-06-08 16:02:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=47.76
+[2026-06-08 16:04:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=48.85
+[2026-06-08 16:06:06] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=48.35
+[2026-06-08 16:07:54] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=48.17
+[2026-06-08 16:09:46] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=51.7
+[2026-06-08 16:11:36] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=50.45
+[2026-06-08 16:13:26] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=49.53
+[2026-06-08 16:15:18] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=51.56
+[2026-06-08 16:17:11] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=52.99
+[2026-06-08 16:19:04] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=53.3
+[2026-06-08 16:20:52] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=48.47
+[2026-06-08 16:22:41] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=48.73
+[2026-06-08 16:24:29] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=48.26
+[2026-06-08 16:26:21] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=51.64
+[2026-06-08 16:28:09] [INFO] Cache report aggiornata | origine=aggiornamento_periodico | file_non_coerenti=0 | durata_secondi=47.61
